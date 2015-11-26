@@ -6,6 +6,7 @@
 const struct ERTCurrencyPairAttributes ERTCurrencyPairAttributes = {
 	.baseCurrencyName = @"baseCurrencyName",
 	.date = @"date",
+	.selectedPair = @"selectedPair",
 	.transactionCurrencyName = @"transactionCurrencyName",
 };
 
@@ -39,12 +40,38 @@ const struct ERTCurrencyPairRelationships ERTCurrencyPairRelationships = {
 + (NSSet*)keyPathsForValuesAffectingValueForKey:(NSString*)key {
 	NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
 
+	if ([key isEqualToString:@"selectedPairValue"]) {
+		NSSet *affectingKey = [NSSet setWithObject:@"selectedPair"];
+		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
+		return keyPaths;
+	}
+
 	return keyPaths;
 }
 
 @dynamic baseCurrencyName;
 
 @dynamic date;
+
+@dynamic selectedPair;
+
+- (BOOL)selectedPairValue {
+	NSNumber *result = [self selectedPair];
+	return [result boolValue];
+}
+
+- (void)setSelectedPairValue:(BOOL)value_ {
+	[self setSelectedPair:[NSNumber numberWithBool:value_]];
+}
+
+- (BOOL)primitiveSelectedPairValue {
+	NSNumber *result = [self primitiveSelectedPair];
+	return [result boolValue];
+}
+
+- (void)setPrimitiveSelectedPairValue:(BOOL)value_ {
+	[self setPrimitiveSelectedPair:[NSNumber numberWithBool:value_]];
+}
 
 @dynamic transactionCurrencyName;
 

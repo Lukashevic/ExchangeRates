@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>New item</key>
+	<dict>
+		<key>baseCurrencyName</key>
+		<string>USD</string>
+		<key>transactionCurrencyName</key>
+		<string>RUR</string>
+		<key>selectedPair</key>
+		<true/>
+	</dict>
+	<key>New item - 2</key>
+	<dict>
+		<key>baseCurrencyName</key>
+		<string>USD</string>
+		<key>transactionCurrencyName</key>
+		<string>EUR</string>
+	</dict>
+	<key>New item - 3</key>
+	<dict>
+		<key>baseCurrencyName</key>
+		<string>EUR</string>
+		<key>transactionCurrencyName</key>
+		<string>RUR</string>
+	</dict>
+	<key>New item - 4</key>
+	<dict>
+		<key>baseCurrencyName</key>
+		<string>EUR</string>
+		<key>transactionCurrencyName</key>
+		<string>USD</string>
+	</dict>
+	<key>New item - 5</key>
+	<dict>
+		<key>baseCurrencyName</key>
+		<string>RUR</string>
+		<key>transactionCurrencyName</key>
+		<string>USD</string>
+	</dict>
+	<key>New item - 6</key>
+	<dict>
+		<key>baseCurrencyName</key>
+		<string>RUR</string>
+		<key>transactionCurrencyName</key>
+		<string>EUR</string>
+	</dict>
+</dict>
+</plist>

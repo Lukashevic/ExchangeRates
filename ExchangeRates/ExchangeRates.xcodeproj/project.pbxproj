@@ -35,6 +35,8 @@
 		5092B2481C07393B00FC7D51 /* ERTWebServiceErrors.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5092B24A1C07393B00FC7D51 /* ERTWebServiceErrors.strings */; };
 		5092B2501C073BEA00FC7D51 /* ERTCurrencyPair+Parsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 5092B24F1C073BEA00FC7D51 /* ERTCurrencyPair+Parsing.m */; };
 		5092B2551C073DCC00FC7D51 /* NSDate+DateFromString.m in Sources */ = {isa = PBXBuildFile; fileRef = 5092B2541C073DCC00FC7D51 /* NSDate+DateFromString.m */; };
+		5092B25B1C07439200FC7D51 /* ERTDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5092B25A1C07439200FC7D51 /* ERTDataManager.m */; };
+		5092B25D1C07447900FC7D51 /* CurrenciesList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5092B25C1C07447900FC7D51 /* CurrenciesList.plist */; };
 		50D311B01C06FF8B005FDCCE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D311AF1C06FF8B005FDCCE /* main.m */; };
 		50D311B31C06FF8B005FDCCE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D311B21C06FF8B005FDCCE /* AppDelegate.m */; };
 		50D311BB1C06FF8B005FDCCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D311BA1C06FF8B005FDCCE /* Assets.xcassets */; };
@@ -64,11 +66,15 @@
 		5092B2431C07351300FC7D51 /* ERTWebService+CurrencyRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ERTWebService+CurrencyRequest.h"; sourceTree = "<group>"; };
 		5092B2441C07351300FC7D51 /* ERTWebService+CurrencyRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ERTWebService+CurrencyRequest.m"; sourceTree = "<group>"; };
 		5092B2491C07393B00FC7D51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/ERTWebServiceErrors.strings; sourceTree = "<group>"; };
-		5092B24C1C07399300FC7D51 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ERTWebServiceErrors.strings; sourceTree = "<group>"; };
 		5092B24E1C073BEA00FC7D51 /* ERTCurrencyPair+Parsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ERTCurrencyPair+Parsing.h"; sourceTree = "<group>"; };
 		5092B24F1C073BEA00FC7D51 /* ERTCurrencyPair+Parsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ERTCurrencyPair+Parsing.m"; sourceTree = "<group>"; };
 		5092B2531C073DCC00FC7D51 /* NSDate+DateFromString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DateFromString.h"; sourceTree = "<group>"; };
 		5092B2541C073DCC00FC7D51 /* NSDate+DateFromString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DateFromString.m"; sourceTree = "<group>"; };
+		5092B2571C0742DD00FC7D51 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		5092B2581C0742DE00FC7D51 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/ERTWebServiceErrors.strings; sourceTree = "<group>"; };
+		5092B2591C07439200FC7D51 /* ERTDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ERTDataManager.h; sourceTree = "<group>"; };
+		5092B25A1C07439200FC7D51 /* ERTDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ERTDataManager.m; sourceTree = "<group>"; };
+		5092B25C1C07447900FC7D51 /* CurrenciesList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CurrenciesList.plist; sourceTree = "<group>"; };
 		50D311AB1C06FF8A005FDCCE /* ExchangeRates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeRates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D311AF1C06FF8B005FDCCE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		50D311B11C06FF8B005FDCCE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -117,7 +123,8 @@
 		50432BEF1C0708FA00D6CBDB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				5092B24A1C07393B00FC7D51 /* ERTWebServiceErrors.strings */,
+				5092B2561C07420400FC7D51 /* Localization */,
+				5092B25C1C07447900FC7D51 /* CurrenciesList.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -155,6 +162,8 @@
 				50432C0C1C07141F00D6CBDB /* Machine */,
 				50432C0D1C07141F00D6CBDB /* User */,
 				50432C091C07119F00D6CBDB /* Model.xcdatamodeld */,
+				5092B2591C07439200FC7D51 /* ERTDataManager.h */,
+				5092B25A1C07439200FC7D51 /* ERTDataManager.m */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -226,6 +235,14 @@
 				5092B2541C073DCC00FC7D51 /* NSDate+DateFromString.m */,
 			);
 			path = "Cocoa+Categories";
+			sourceTree = "<group>";
+		};
+		5092B2561C07420400FC7D51 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				5092B24A1C07393B00FC7D51 /* ERTWebServiceErrors.strings */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		50D311A21C06FF8A005FDCCE = {
@@ -321,8 +338,8 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				ru,
 			);
 			mainGroup = 50D311A21C06FF8A005FDCCE;
 			productRefGroup = 50D311AC1C06FF8A005FDCCE /* Products */;
@@ -344,6 +361,7 @@
 				50432BF21C070A6200D6CBDB /* Main.storyboard in Resources */,
 				5092B2481C07393B00FC7D51 /* ERTWebServiceErrors.strings in Resources */,
 				50D311BE1C06FF8B005FDCCE /* LaunchScreen.storyboard in Resources */,
+				5092B25D1C07447900FC7D51 /* CurrenciesList.plist in Resources */,
 				50D311BB1C06FF8B005FDCCE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,6 +441,7 @@
 				50432CA21C071B9900D6CBDB /* ERTWebService.m in Sources */,
 				50432C1E1C071A3E00D6CBDB /* ERTCurrencyPair.m in Sources */,
 				50432BF71C070ADA00D6CBDB /* ERTRatesVC.m in Sources */,
+				5092B25B1C07439200FC7D51 /* ERTDataManager.m in Sources */,
 				50D311B31C06FF8B005FDCCE /* AppDelegate.m in Sources */,
 				50432C1F1C071A3E00D6CBDB /* ERTRate.m in Sources */,
 				50D311B01C06FF8B005FDCCE /* main.m in Sources */,
@@ -439,7 +458,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				5092B2491C07393B00FC7D51 /* Base */,
-				5092B24C1C07399300FC7D51 /* en */,
+				5092B2581C0742DE00FC7D51 /* ru */,
 			);
 			name = ERTWebServiceErrors.strings;
 			sourceTree = "<group>";
@@ -448,6 +467,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				50D311BD1C06FF8B005FDCCE /* Base */,
+				5092B2571C0742DD00FC7D51 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			path = ..;

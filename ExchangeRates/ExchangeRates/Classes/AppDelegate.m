@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ERTDataManager.h"
 
 @interface AppDelegate ()
 
@@ -20,6 +21,7 @@
   [MagicalRecord setShouldDeleteStoreOnModelMismatch:YES];
   [MagicalRecord enableShorthandMethods];
   [MagicalRecord setupAutoMigratingCoreDataStack];
+  [ERTDataManager prefillDataIfNeed];
   
   return YES;
 }

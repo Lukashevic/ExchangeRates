@@ -1,0 +1,26 @@
+//
+//  PrefixHeader.pch
+//  ExchangeRates
+//
+//  Created by Max Lukashevich on 26.11.15.
+//  Copyright © 2015 mlukashevich. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <Availability.h>
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
+#endif
+#import <CocoaLumberjack/CocoaLumberjack.h>
+
+#define MR_SHORTHAND
+#import <MagicalRecord/MagicalRecord.h>
+#import <MagicalRecord/MagicalRecord+ShorthandMethods.h>
+#import <MagicalRecord/MagicalRecordShorthandMethodAliases.h>
+
+#endif

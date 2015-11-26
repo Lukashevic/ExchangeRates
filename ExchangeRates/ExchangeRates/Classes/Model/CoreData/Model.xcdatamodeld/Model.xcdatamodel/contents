@@ -2,13 +2,13 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15B42" minimumToolsVersion="Xcode 7.0">
     <entity name="ERTBaseCurrency" representedClassName="ERTBaseCurrency" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
-        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ERTCurrencyPair" inverseName="exchangeRates" inverseEntity="ERTCurrencyPair" syncable="YES"/>
+        <relationship name="currencyPair" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ERTCurrencyPair" inverseName="exchangeRates" inverseEntity="ERTCurrencyPair" syncable="YES"/>
         <relationship name="rates" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ERTRate" inverseName="baseCurrency" inverseEntity="ERTRate" syncable="YES"/>
     </entity>
     <entity name="ERTCurrencyPair" representedClassName="ERTCurrencyPair" syncable="YES">
         <attribute name="baseCurrencyName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="transactionCurrencyName" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="exchangeRates" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ERTBaseCurrency" inverseName="newRelationship" inverseEntity="ERTBaseCurrency" syncable="YES"/>
+        <relationship name="exchangeRates" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ERTBaseCurrency" inverseName="currencyPair" inverseEntity="ERTBaseCurrency" syncable="YES"/>
     </entity>
     <entity name="ERTRate" representedClassName="ERTRate" syncable="YES">
         <attribute name="rateValue" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -16,7 +16,7 @@
     </entity>
     <elements>
         <element name="ERTBaseCurrency" positionX="-722" positionY="-619" width="128" height="88"/>
-        <element name="ERTRate" positionX="-531" positionY="-612" width="128" height="73"/>
         <element name="ERTCurrencyPair" positionX="-720" positionY="-757" width="128" height="88"/>
+        <element name="ERTRate" positionX="-531" positionY="-612" width="128" height="73"/>
     </elements>
 </model>

@@ -8,7 +8,7 @@ const struct ERTBaseCurrencyAttributes ERTBaseCurrencyAttributes = {
 };
 
 const struct ERTBaseCurrencyRelationships ERTBaseCurrencyRelationships = {
-	.newRelationship = @"newRelationship",
+	.currencyPair = @"currencyPair",
 	.rates = @"rates",
 };
 
@@ -43,7 +43,7 @@ const struct ERTBaseCurrencyRelationships ERTBaseCurrencyRelationships = {
 
 @dynamic date;
 
-@dynamic newRelationship;
+@dynamic currencyPair;
 
 @dynamic rates;
 

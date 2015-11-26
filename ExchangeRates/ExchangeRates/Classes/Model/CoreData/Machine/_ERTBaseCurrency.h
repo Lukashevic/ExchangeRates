@@ -8,7 +8,7 @@ extern const struct ERTBaseCurrencyAttributes {
 } ERTBaseCurrencyAttributes;
 
 extern const struct ERTBaseCurrencyRelationships {
-	__unsafe_unretained NSString *newRelationship;
+	__unsafe_unretained NSString *currencyPair;
 	__unsafe_unretained NSString *rates;
 } ERTBaseCurrencyRelationships;
 
@@ -28,9 +28,9 @@ extern const struct ERTBaseCurrencyRelationships {
 
 //- (BOOL)validateDate:(id*)value_ error:(NSError**)error_;
 
-@property (nonatomic, strong) ERTCurrencyPair *newRelationship;
+@property (nonatomic, strong) ERTCurrencyPair *currencyPair;
 
-//- (BOOL)validateNewRelationship:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateCurrencyPair:(id*)value_ error:(NSError**)error_;
 
 @property (nonatomic, strong) NSSet *rates;
 
@@ -51,8 +51,8 @@ extern const struct ERTBaseCurrencyRelationships {
 - (NSDate*)primitiveDate;
 - (void)setPrimitiveDate:(NSDate*)value;
 
-- (ERTCurrencyPair*)primitiveNewRelationship;
-- (void)setPrimitiveNewRelationship:(ERTCurrencyPair*)value;
+- (ERTCurrencyPair*)primitiveCurrencyPair;
+- (void)setPrimitiveCurrencyPair:(ERTCurrencyPair*)value;
 
 - (NSMutableSet*)primitiveRates;
 - (void)setPrimitiveRates:(NSMutableSet*)value;

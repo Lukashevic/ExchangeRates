@@ -3,6 +3,7 @@ platform :ios, '8.0'
 target 'ExchangeRates' do
 
 pod 'AFNetworking', '~> 2.0'
-pod "MagicalRecord"
+pod 'MagicalRecord'
+pod 'CocoaLumberjack', '2.0.0'
 
 end

@@ -31,6 +31,8 @@
 		50432C1D1C071A3E00D6CBDB /* ERTBaseCurrency.m in Sources */ = {isa = PBXBuildFile; fileRef = 50432C181C071A3E00D6CBDB /* ERTBaseCurrency.m */; };
 		50432C1E1C071A3E00D6CBDB /* ERTCurrencyPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 50432C1A1C071A3E00D6CBDB /* ERTCurrencyPair.m */; };
 		50432C1F1C071A3E00D6CBDB /* ERTRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50432C1C1C071A3E00D6CBDB /* ERTRate.m */; };
+		50432C9F1C071B9900D6CBDB /* ERTWebRequestInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 50432C871C071B9900D6CBDB /* ERTWebRequestInfo.m */; };
+		50432CA21C071B9900D6CBDB /* ERTWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 50432C8D1C071B9900D6CBDB /* ERTWebService.m */; };
 		50D311B01C06FF8B005FDCCE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D311AF1C06FF8B005FDCCE /* main.m */; };
 		50D311B31C06FF8B005FDCCE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D311B21C06FF8B005FDCCE /* AppDelegate.m */; };
 		50D311BB1C06FF8B005FDCCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D311BA1C06FF8B005FDCCE /* Assets.xcassets */; };
@@ -56,6 +58,11 @@
 		50432C1A1C071A3E00D6CBDB /* ERTCurrencyPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ERTCurrencyPair.m; sourceTree = "<group>"; };
 		50432C1B1C071A3E00D6CBDB /* ERTRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ERTRate.h; sourceTree = "<group>"; };
 		50432C1C1C071A3E00D6CBDB /* ERTRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ERTRate.m; sourceTree = "<group>"; };
+		50432C861C071B9900D6CBDB /* ERTWebRequestInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ERTWebRequestInfo.h; sourceTree = "<group>"; };
+		50432C871C071B9900D6CBDB /* ERTWebRequestInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ERTWebRequestInfo.m; sourceTree = "<group>"; };
+		50432C8C1C071B9900D6CBDB /* ERTWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ERTWebService.h; sourceTree = "<group>"; };
+		50432C8D1C071B9900D6CBDB /* ERTWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ERTWebService.m; sourceTree = "<group>"; };
+		5092B2401C0732D500FC7D51 /* ExchangeRates.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExchangeRates.pch; sourceTree = "<group>"; };
 		50D311AB1C06FF8A005FDCCE /* ExchangeRates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeRates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D311AF1C06FF8B005FDCCE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		50D311B11C06FF8B005FDCCE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -94,6 +101,7 @@
 			children = (
 				50D311B11C06FF8B005FDCCE /* AppDelegate.h */,
 				50D311B21C06FF8B005FDCCE /* AppDelegate.m */,
+				50432C641C071B9900D6CBDB /* WebService */,
 				50432BF41C070AB800D6CBDB /* Model */,
 				50432BF31C070AA600D6CBDB /* Contollers */,
 			);
@@ -170,6 +178,17 @@
 			path = User;
 			sourceTree = "<group>";
 		};
+		50432C641C071B9900D6CBDB /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				50432C8C1C071B9900D6CBDB /* ERTWebService.h */,
+				50432C8D1C071B9900D6CBDB /* ERTWebService.m */,
+				50432C861C071B9900D6CBDB /* ERTWebRequestInfo.h */,
+				50432C871C071B9900D6CBDB /* ERTWebRequestInfo.m */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
 		50D311A21C06FF8A005FDCCE = {
 			isa = PBXGroup;
 			children = (
@@ -202,9 +221,10 @@
 		50D311AE1C06FF8A005FDCCE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				50432C071C07110700D6CBDB /* Info.plist */,
 				50D311BA1C06FF8B005FDCCE /* Assets.xcassets */,
+				50432C071C07110700D6CBDB /* Info.plist */,
 				50D311AF1C06FF8B005FDCCE /* main.m */,
+				5092B2401C0732D500FC7D51 /* ExchangeRates.pch */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -358,6 +378,7 @@
 			files = (
 				50432C151C071A3200D6CBDB /* _ERTCurrencyPair.m in Sources */,
 				50432C161C071A3200D6CBDB /* _ERTRate.m in Sources */,
+				50432CA21C071B9900D6CBDB /* ERTWebService.m in Sources */,
 				50432C1E1C071A3E00D6CBDB /* ERTCurrencyPair.m in Sources */,
 				50432BF71C070ADA00D6CBDB /* ERTRatesVC.m in Sources */,
 				50D311B31C06FF8B005FDCCE /* AppDelegate.m in Sources */,
@@ -365,6 +386,7 @@
 				50D311B01C06FF8B005FDCCE /* main.m in Sources */,
 				50432C1D1C071A3E00D6CBDB /* ERTBaseCurrency.m in Sources */,
 				50432C141C071A3200D6CBDB /* _ERTBaseCurrency.m in Sources */,
+				50432C9F1C071B9900D6CBDB /* ERTWebRequestInfo.m in Sources */,
 				50432C0B1C07119F00D6CBDB /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,6 +505,7 @@
 			baseConfigurationReference = 52FC1610EDFABBA0DC671CDE /* Pods-ExchangeRates.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "ExchangeRates/Supporting Files/ExchangeRates.pch";
 				INFOPLIST_FILE = "ExchangeRates/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mlukashevich.ExchangeRates;
@@ -495,6 +518,7 @@
 			baseConfigurationReference = 586B758A6D1C84276278C1BB /* Pods-ExchangeRates.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "ExchangeRates/Supporting Files/ExchangeRates.pch";
 				INFOPLIST_FILE = "ExchangeRates/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mlukashevich.ExchangeRates;

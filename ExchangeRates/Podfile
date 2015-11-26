@@ -1,0 +1,8 @@
+platform :ios, '8.0'
+
+target 'ExchangeRates' do
+
+pod 'AFNetworking', '~> 2.0'
+pod "MagicalRecord"
+
+end

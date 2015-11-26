@@ -6,13 +6,13 @@
 //  Copyright © 2015 mlukashevich. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ERTRatesVC.h"
 
-@interface ViewController ()
+@interface ERTRatesVC ()
 
 @end
 
-@implementation ViewController
+@implementation ERTRatesVC
 
 - (void)viewDidLoad {
   [super viewDidLoad];

@@ -6,26 +6,48 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		50432BF81C070BF700D6CBDB /* Mogenerator */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 50432BF91C070BF700D6CBDB /* Build configuration list for PBXAggregateTarget "Mogenerator" */;
+			buildPhases = (
+				50432BFC1C070C0900D6CBDB /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Mogenerator;
+			productName = Mogenerator;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
+		50432BF21C070A6200D6CBDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50432BF11C070A6200D6CBDB /* Main.storyboard */; };
+		50432BF71C070ADA00D6CBDB /* ERTRatesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 50432BF61C070ADA00D6CBDB /* ERTRatesVC.m */; };
+		50432C081C07110700D6CBDB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50432C071C07110700D6CBDB /* Info.plist */; };
+		50432C0B1C07119F00D6CBDB /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 50432C091C07119F00D6CBDB /* Model.xcdatamodeld */; };
 		50D311B01C06FF8B005FDCCE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D311AF1C06FF8B005FDCCE /* main.m */; };
 		50D311B31C06FF8B005FDCCE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D311B21C06FF8B005FDCCE /* AppDelegate.m */; };
-		50D311B61C06FF8B005FDCCE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D311B51C06FF8B005FDCCE /* ViewController.m */; };
-		50D311B91C06FF8B005FDCCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50D311B71C06FF8B005FDCCE /* Main.storyboard */; };
 		50D311BB1C06FF8B005FDCCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D311BA1C06FF8B005FDCCE /* Assets.xcassets */; };
 		50D311BE1C06FF8B005FDCCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50D311BC1C06FF8B005FDCCE /* LaunchScreen.storyboard */; };
+		C89F1453EDADF0799DCA8B80 /* libPods-ExchangeRates.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EF0DB8BB519E3D53DE25731 /* libPods-ExchangeRates.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		50432BF11C070A6200D6CBDB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		50432BF51C070ADA00D6CBDB /* ERTRatesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ERTRatesVC.h; sourceTree = "<group>"; };
+		50432BF61C070ADA00D6CBDB /* ERTRatesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ERTRatesVC.m; sourceTree = "<group>"; };
+		50432C071C07110700D6CBDB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50432C0A1C07119F00D6CBDB /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		50D311AB1C06FF8A005FDCCE /* ExchangeRates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeRates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D311AF1C06FF8B005FDCCE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		50D311B11C06FF8B005FDCCE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		50D311B21C06FF8B005FDCCE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		50D311B41C06FF8B005FDCCE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		50D311B51C06FF8B005FDCCE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		50D311B81C06FF8B005FDCCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		50D311BA1C06FF8B005FDCCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50D311BD1C06FF8B005FDCCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50D311BF1C06FF8B005FDCCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52FC1610EDFABBA0DC671CDE /* Pods-ExchangeRates.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExchangeRates.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExchangeRates/Pods-ExchangeRates.debug.xcconfig"; sourceTree = "<group>"; };
+		586B758A6D1C84276278C1BB /* Pods-ExchangeRates.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExchangeRates.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExchangeRates/Pods-ExchangeRates.release.xcconfig"; sourceTree = "<group>"; };
+		8EF0DB8BB519E3D53DE25731 /* libPods-ExchangeRates.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ExchangeRates.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +55,82 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C89F1453EDADF0799DCA8B80 /* libPods-ExchangeRates.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10A7E0EA3A5388A54FCA1CA1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				52FC1610EDFABBA0DC671CDE /* Pods-ExchangeRates.debug.xcconfig */,
+				586B758A6D1C84276278C1BB /* Pods-ExchangeRates.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		50432BED1C0708AA00D6CBDB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				50D311B11C06FF8B005FDCCE /* AppDelegate.h */,
+				50D311B21C06FF8B005FDCCE /* AppDelegate.m */,
+				50432BF41C070AB800D6CBDB /* Model */,
+				50432BF31C070AA600D6CBDB /* Contollers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		50432BEF1C0708FA00D6CBDB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				50D311BF1C06FF8B005FDCCE /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		50432BF01C07099D00D6CBDB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				50D311BC1C06FF8B005FDCCE /* LaunchScreen.storyboard */,
+				50432BF11C070A6200D6CBDB /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		50432BF31C070AA600D6CBDB /* Contollers */ = {
+			isa = PBXGroup;
+			children = (
+				50432BF51C070ADA00D6CBDB /* ERTRatesVC.h */,
+				50432BF61C070ADA00D6CBDB /* ERTRatesVC.m */,
+			);
+			path = Contollers;
+			sourceTree = "<group>";
+		};
+		50432BF41C070AB800D6CBDB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				50432C001C070E1D00D6CBDB /* CoreData */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		50432C001C070E1D00D6CBDB /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				50432C091C07119F00D6CBDB /* Model.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		50D311A21C06FF8A005FDCCE = {
 			isa = PBXGroup;
 			children = (
 				50D311AD1C06FF8A005FDCCE /* ExchangeRates */,
 				50D311AC1C06FF8A005FDCCE /* Products */,
+				10A7E0EA3A5388A54FCA1CA1 /* Pods */,
+				53DB86407D8BACF619A2CDD8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,14 +145,9 @@
 		50D311AD1C06FF8A005FDCCE /* ExchangeRates */ = {
 			isa = PBXGroup;
 			children = (
-				50D311B11C06FF8B005FDCCE /* AppDelegate.h */,
-				50D311B21C06FF8B005FDCCE /* AppDelegate.m */,
-				50D311B41C06FF8B005FDCCE /* ViewController.h */,
-				50D311B51C06FF8B005FDCCE /* ViewController.m */,
-				50D311B71C06FF8B005FDCCE /* Main.storyboard */,
-				50D311BA1C06FF8B005FDCCE /* Assets.xcassets */,
-				50D311BC1C06FF8B005FDCCE /* LaunchScreen.storyboard */,
-				50D311BF1C06FF8B005FDCCE /* Info.plist */,
+				50432BF01C07099D00D6CBDB /* Storyboards */,
+				50432BED1C0708AA00D6CBDB /* Classes */,
+				50432BEF1C0708FA00D6CBDB /* Resources */,
 				50D311AE1C06FF8A005FDCCE /* Supporting Files */,
 			);
 			path = ExchangeRates;
@@ -74,9 +156,19 @@
 		50D311AE1C06FF8A005FDCCE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				50432C071C07110700D6CBDB /* Info.plist */,
+				50D311BA1C06FF8B005FDCCE /* Assets.xcassets */,
 				50D311AF1C06FF8B005FDCCE /* main.m */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		53DB86407D8BACF619A2CDD8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8EF0DB8BB519E3D53DE25731 /* libPods-ExchangeRates.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,9 +178,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50D311C21C06FF8B005FDCCE /* Build configuration list for PBXNativeTarget "ExchangeRates" */;
 			buildPhases = (
+				E07C6BB7C73F3957E5EE1515 /* Check Pods Manifest.lock */,
 				50D311A71C06FF8A005FDCCE /* Sources */,
 				50D311A81C06FF8A005FDCCE /* Frameworks */,
 				50D311A91C06FF8A005FDCCE /* Resources */,
+				EC93C765FDEBA7521EF5D36D /* Embed Pods Frameworks */,
+				344DE4868D6D6230DFD50DCF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -108,6 +203,9 @@
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = mlukashevich;
 				TargetAttributes = {
+					50432BF81C070BF700D6CBDB = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
 					50D311AA1C06FF8A005FDCCE = {
 						CreatedOnToolsVersion = 7.1.1;
 					};
@@ -127,6 +225,7 @@
 			projectRoot = "";
 			targets = (
 				50D311AA1C06FF8A005FDCCE /* ExchangeRates */,
+				50432BF81C070BF700D6CBDB /* Mogenerator */,
 			);
 		};
 /* End PBXProject section */
@@ -136,47 +235,117 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50432C081C07110700D6CBDB /* Info.plist in Resources */,
+				50432BF21C070A6200D6CBDB /* Main.storyboard in Resources */,
 				50D311BE1C06FF8B005FDCCE /* LaunchScreen.storyboard in Resources */,
 				50D311BB1C06FF8B005FDCCE /* Assets.xcassets in Resources */,
-				50D311B91C06FF8B005FDCCE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		344DE4868D6D6230DFD50DCF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExchangeRates/Pods-ExchangeRates-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50432BFC1C070C0900D6CBDB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n#\n# Automatic (re)generation of model classes for all *.xcdatamodel files.\n\n# mogenerator installed through homebrew is located in /usr/local/bin\nPATH=${PATH}:/usr/local/bin\n\nif ! hash mogenerator 2>/dev/null; then\necho \"warning: mogenerator is not installed\"\nexit 0\nfi\n\n# Define output directories\nPROJECT_DIR=\"${SRCROOT}/ExchangeRates/Classes/Model/CoreData\"\n\nCOREDATA_MODEL_NAME=\"Model\"\nCOREDATA_MODEL=\"${COREDATA_MODEL_NAME}.xcdatamodeld\"\n\nMACHINE_DIR=\"${PROJECT_DIR}/Machine/\"\nMODEL_DIR=\"${PROJECT_DIR}/User/\"\n\n# Look for the Xcode project directory for this file\ncd \"${PROJECT_DIR}/${COREDATA_MODEL}\"\n\n# The output directories have to exist, so create them\nmkdir -p \"${MACHINE_DIR}\" \"${MODEL_DIR}\"\n\nmogenerator -m \"${PROJECT_DIR}/${COREDATA_MODEL}\" -M \"${MACHINE_DIR}\" -H \"${MODEL_DIR}\" --template-var arc=true";
+		};
+		E07C6BB7C73F3957E5EE1515 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EC93C765FDEBA7521EF5D36D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExchangeRates/Pods-ExchangeRates-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		50D311A71C06FF8A005FDCCE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50D311B61C06FF8B005FDCCE /* ViewController.m in Sources */,
+				50432BF71C070ADA00D6CBDB /* ERTRatesVC.m in Sources */,
 				50D311B31C06FF8B005FDCCE /* AppDelegate.m in Sources */,
 				50D311B01C06FF8B005FDCCE /* main.m in Sources */,
+				50432C0B1C07119F00D6CBDB /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		50D311B71C06FF8B005FDCCE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				50D311B81C06FF8B005FDCCE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		50D311BC1C06FF8B005FDCCE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				50D311BD1C06FF8B005FDCCE /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		50432BFA1C070BF700D6CBDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		50432BFB1C070BF700D6CBDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		50D311C01C06FF8B005FDCCE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -259,9 +428,10 @@
 		};
 		50D311C31C06FF8B005FDCCE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52FC1610EDFABBA0DC671CDE /* Pods-ExchangeRates.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ExchangeRates/Info.plist;
+				INFOPLIST_FILE = ExchangeRates/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mlukashevich.ExchangeRates;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -270,9 +440,10 @@
 		};
 		50D311C41C06FF8B005FDCCE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 586B758A6D1C84276278C1BB /* Pods-ExchangeRates.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ExchangeRates/Info.plist;
+				INFOPLIST_FILE = ExchangeRates/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mlukashevich.ExchangeRates;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -282,6 +453,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		50432BF91C070BF700D6CBDB /* Build configuration list for PBXAggregateTarget "Mogenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50432BFA1C070BF700D6CBDB /* Debug */,
+				50432BFB1C070BF700D6CBDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		50D311A61C06FF8A005FDCCE /* Build configuration list for PBXProject "ExchangeRates" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -298,8 +478,22 @@
 				50D311C41C06FF8B005FDCCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		50432C091C07119F00D6CBDB /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				50432C0A1C07119F00D6CBDB /* Model.xcdatamodel */,
+			);
+			currentVersion = 50432C0A1C07119F00D6CBDB /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 50D311A31C06FF8A005FDCCE /* Project object */;
 }

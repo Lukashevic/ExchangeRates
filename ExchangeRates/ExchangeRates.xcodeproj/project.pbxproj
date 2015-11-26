@@ -25,6 +25,12 @@
 		50432BF71C070ADA00D6CBDB /* ERTRatesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 50432BF61C070ADA00D6CBDB /* ERTRatesVC.m */; };
 		50432C081C07110700D6CBDB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50432C071C07110700D6CBDB /* Info.plist */; };
 		50432C0B1C07119F00D6CBDB /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 50432C091C07119F00D6CBDB /* Model.xcdatamodeld */; };
+		50432C141C071A3200D6CBDB /* _ERTBaseCurrency.m in Sources */ = {isa = PBXBuildFile; fileRef = 50432C0F1C071A3200D6CBDB /* _ERTBaseCurrency.m */; };
+		50432C151C071A3200D6CBDB /* _ERTCurrencyPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 50432C111C071A3200D6CBDB /* _ERTCurrencyPair.m */; };
+		50432C161C071A3200D6CBDB /* _ERTRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50432C131C071A3200D6CBDB /* _ERTRate.m */; };
+		50432C1D1C071A3E00D6CBDB /* ERTBaseCurrency.m in Sources */ = {isa = PBXBuildFile; fileRef = 50432C181C071A3E00D6CBDB /* ERTBaseCurrency.m */; };
+		50432C1E1C071A3E00D6CBDB /* ERTCurrencyPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 50432C1A1C071A3E00D6CBDB /* ERTCurrencyPair.m */; };
+		50432C1F1C071A3E00D6CBDB /* ERTRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50432C1C1C071A3E00D6CBDB /* ERTRate.m */; };
 		50D311B01C06FF8B005FDCCE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D311AF1C06FF8B005FDCCE /* main.m */; };
 		50D311B31C06FF8B005FDCCE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D311B21C06FF8B005FDCCE /* AppDelegate.m */; };
 		50D311BB1C06FF8B005FDCCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D311BA1C06FF8B005FDCCE /* Assets.xcassets */; };
@@ -38,6 +44,18 @@
 		50432BF61C070ADA00D6CBDB /* ERTRatesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ERTRatesVC.m; sourceTree = "<group>"; };
 		50432C071C07110700D6CBDB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50432C0A1C07119F00D6CBDB /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		50432C0E1C071A3200D6CBDB /* _ERTBaseCurrency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _ERTBaseCurrency.h; sourceTree = "<group>"; };
+		50432C0F1C071A3200D6CBDB /* _ERTBaseCurrency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _ERTBaseCurrency.m; sourceTree = "<group>"; };
+		50432C101C071A3200D6CBDB /* _ERTCurrencyPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _ERTCurrencyPair.h; sourceTree = "<group>"; };
+		50432C111C071A3200D6CBDB /* _ERTCurrencyPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _ERTCurrencyPair.m; sourceTree = "<group>"; };
+		50432C121C071A3200D6CBDB /* _ERTRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _ERTRate.h; sourceTree = "<group>"; };
+		50432C131C071A3200D6CBDB /* _ERTRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _ERTRate.m; sourceTree = "<group>"; };
+		50432C171C071A3E00D6CBDB /* ERTBaseCurrency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ERTBaseCurrency.h; sourceTree = "<group>"; };
+		50432C181C071A3E00D6CBDB /* ERTBaseCurrency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ERTBaseCurrency.m; sourceTree = "<group>"; };
+		50432C191C071A3E00D6CBDB /* ERTCurrencyPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ERTCurrencyPair.h; sourceTree = "<group>"; };
+		50432C1A1C071A3E00D6CBDB /* ERTCurrencyPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ERTCurrencyPair.m; sourceTree = "<group>"; };
+		50432C1B1C071A3E00D6CBDB /* ERTRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ERTRate.h; sourceTree = "<group>"; };
+		50432C1C1C071A3E00D6CBDB /* ERTRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ERTRate.m; sourceTree = "<group>"; };
 		50D311AB1C06FF8A005FDCCE /* ExchangeRates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeRates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D311AF1C06FF8B005FDCCE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		50D311B11C06FF8B005FDCCE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -119,9 +137,37 @@
 		50432C001C070E1D00D6CBDB /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				50432C0C1C07141F00D6CBDB /* Machine */,
+				50432C0D1C07141F00D6CBDB /* User */,
 				50432C091C07119F00D6CBDB /* Model.xcdatamodeld */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		50432C0C1C07141F00D6CBDB /* Machine */ = {
+			isa = PBXGroup;
+			children = (
+				50432C0E1C071A3200D6CBDB /* _ERTBaseCurrency.h */,
+				50432C0F1C071A3200D6CBDB /* _ERTBaseCurrency.m */,
+				50432C101C071A3200D6CBDB /* _ERTCurrencyPair.h */,
+				50432C111C071A3200D6CBDB /* _ERTCurrencyPair.m */,
+				50432C121C071A3200D6CBDB /* _ERTRate.h */,
+				50432C131C071A3200D6CBDB /* _ERTRate.m */,
+			);
+			path = Machine;
+			sourceTree = "<group>";
+		};
+		50432C0D1C07141F00D6CBDB /* User */ = {
+			isa = PBXGroup;
+			children = (
+				50432C171C071A3E00D6CBDB /* ERTBaseCurrency.h */,
+				50432C181C071A3E00D6CBDB /* ERTBaseCurrency.m */,
+				50432C191C071A3E00D6CBDB /* ERTCurrencyPair.h */,
+				50432C1A1C071A3E00D6CBDB /* ERTCurrencyPair.m */,
+				50432C1B1C071A3E00D6CBDB /* ERTRate.h */,
+				50432C1C1C071A3E00D6CBDB /* ERTRate.m */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		50D311A21C06FF8A005FDCCE = {
@@ -310,9 +356,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50432C151C071A3200D6CBDB /* _ERTCurrencyPair.m in Sources */,
+				50432C161C071A3200D6CBDB /* _ERTRate.m in Sources */,
+				50432C1E1C071A3E00D6CBDB /* ERTCurrencyPair.m in Sources */,
 				50432BF71C070ADA00D6CBDB /* ERTRatesVC.m in Sources */,
 				50D311B31C06FF8B005FDCCE /* AppDelegate.m in Sources */,
+				50432C1F1C071A3E00D6CBDB /* ERTRate.m in Sources */,
 				50D311B01C06FF8B005FDCCE /* main.m in Sources */,
+				50432C1D1C071A3E00D6CBDB /* ERTBaseCurrency.m in Sources */,
+				50432C141C071A3200D6CBDB /* _ERTBaseCurrency.m in Sources */,
 				50432C0B1C07119F00D6CBDB /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,7 +483,7 @@
 			baseConfigurationReference = 52FC1610EDFABBA0DC671CDE /* Pods-ExchangeRates.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ExchangeRates/Resources/Info.plist;
+				INFOPLIST_FILE = "ExchangeRates/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mlukashevich.ExchangeRates;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -443,7 +495,7 @@
 			baseConfigurationReference = 586B758A6D1C84276278C1BB /* Pods-ExchangeRates.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ExchangeRates/Resources/Info.plist;
+				INFOPLIST_FILE = "ExchangeRates/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mlukashevich.ExchangeRates;
 				PRODUCT_NAME = "$(TARGET_NAME)";

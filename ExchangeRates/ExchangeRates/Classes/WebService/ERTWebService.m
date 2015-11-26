@@ -7,8 +7,8 @@
 #import "ERTWebRequestInfo.h"
 #import "AFHTTPRequestOperationManager.h"
 
-NSString * const ERTAppDomen = @"com.ExchangeRates.app";
-NSString * const ERTBaseUrl = @"http://api.fixer.io";
+NSString * const ERTAppDomen = @"com.exchangerates.app";
+NSString * const ERTBaseUrl = @"http://api.fixer.io/latest";
 
 @implementation ERTWebService {
   NSString *baseUrlString;
@@ -28,7 +28,6 @@ NSString * const ERTBaseUrl = @"http://api.fixer.io";
   return self;
 }
 
-// TODO: update to URLSessionManager
 - (AFHTTPRequestOperationManager *)manager {
 
   if (!_manager) {
@@ -96,10 +95,6 @@ NSString * const ERTBaseUrl = @"http://api.fixer.io";
 
   NSURL *url = [self manager].baseURL;
 
-  if (requestInfo.path) {
-    url = [NSURL URLWithString:[url.absoluteString stringByAppendingPathComponent:requestInfo.path]];
-  }
-
   AFHTTPRequestSerializer *serializer = [self manager].requestSerializer;
 
   NSDictionary *parameters = (requestInfo.parameters.count > 0) ? requestInfo.parameters : nil;
@@ -115,19 +110,6 @@ NSString * const ERTBaseUrl = @"http://api.fixer.io";
             [self jsonStringWithParameters:parameters]);
 
   return request;
-}
-
-- (void)sendRequestWithMethod:(NSString *)httpMethod
-                         path:(NSString *)path
-                   parameters:(NSDictionary *)parameters
-                   completion:(ERTWebServiceCompletion)completion {
-
-  ERTWebRequestInfo *requestInfo = [ERTWebRequestInfo requestWithHttpMethod:httpMethod
-                                                                       path:path
-                                                                 parameters:parameters];
-
-  [self sendRequestWithRequestInfo:requestInfo
-                        completion:completion];
 }
 
 - (NSString *)jsonStringWithParameters:(NSDictionary *)parameters {
@@ -159,8 +141,8 @@ NSString * const ERTBaseUrl = @"http://api.fixer.io";
 
 - (NSError *)connectionError {
   
-  NSString * message = NSLocalizedStringFromTable(@"reachability_error", @"WebServiceErrors", nil);
-  NSString * reason = NSLocalizedStringFromTable(@"reachability_error_title", @"WebServiceErrors", nil);
+  NSString * message = NSLocalizedStringFromTable(@"reachability_error", @"ERTWebServiceErrors", nil);
+  NSString * reason = NSLocalizedStringFromTable(@"reachability_error_title", @"ERTWebServiceErrors", nil);
   NSError * error = [[NSError alloc] initWithDomain:ERTAppDomen
                                                code:0
                                            userInfo:@{NSLocalizedDescriptionKey : message,

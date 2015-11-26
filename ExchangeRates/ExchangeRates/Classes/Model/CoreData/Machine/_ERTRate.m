@@ -8,7 +8,7 @@ const struct ERTRateAttributes ERTRateAttributes = {
 };
 
 const struct ERTRateRelationships ERTRateRelationships = {
-	.baseCurrency = @"baseCurrency",
+	.currencyPair = @"currencyPair",
 };
 
 @implementation ERTRateID
@@ -66,7 +66,7 @@ const struct ERTRateRelationships ERTRateRelationships = {
 	[self setPrimitiveRateValue:[NSNumber numberWithInt:value_]];
 }
 
-@dynamic baseCurrency;
+@dynamic currencyPair;
 
 @end
 

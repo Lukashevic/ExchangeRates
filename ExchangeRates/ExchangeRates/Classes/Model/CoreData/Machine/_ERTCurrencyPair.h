@@ -5,6 +5,7 @@
 
 extern const struct ERTCurrencyPairAttributes {
 	__unsafe_unretained NSString *baseCurrencyName;
+	__unsafe_unretained NSString *date;
 	__unsafe_unretained NSString *transactionCurrencyName;
 } ERTCurrencyPairAttributes;
 
@@ -12,7 +13,7 @@ extern const struct ERTCurrencyPairRelationships {
 	__unsafe_unretained NSString *exchangeRates;
 } ERTCurrencyPairRelationships;
 
-@class ERTBaseCurrency;
+@class ERTRate;
 
 @interface ERTCurrencyPairID : NSManagedObjectID {}
 @end
@@ -27,6 +28,10 @@ extern const struct ERTCurrencyPairRelationships {
 
 //- (BOOL)validateBaseCurrencyName:(id*)value_ error:(NSError**)error_;
 
+@property (nonatomic, strong) NSDate* date;
+
+//- (BOOL)validateDate:(id*)value_ error:(NSError**)error_;
+
 @property (nonatomic, strong) NSString* transactionCurrencyName;
 
 //- (BOOL)validateTransactionCurrencyName:(id*)value_ error:(NSError**)error_;
@@ -40,8 +45,8 @@ extern const struct ERTCurrencyPairRelationships {
 @interface _ERTCurrencyPair (ExchangeRatesCoreDataGeneratedAccessors)
 - (void)addExchangeRates:(NSSet*)value_;
 - (void)removeExchangeRates:(NSSet*)value_;
-- (void)addExchangeRatesObject:(ERTBaseCurrency*)value_;
-- (void)removeExchangeRatesObject:(ERTBaseCurrency*)value_;
+- (void)addExchangeRatesObject:(ERTRate*)value_;
+- (void)removeExchangeRatesObject:(ERTRate*)value_;
 
 @end
 
@@ -49,6 +54,9 @@ extern const struct ERTCurrencyPairRelationships {
 
 - (NSString*)primitiveBaseCurrencyName;
 - (void)setPrimitiveBaseCurrencyName:(NSString*)value;
+
+- (NSDate*)primitiveDate;
+- (void)setPrimitiveDate:(NSDate*)value;
 
 - (NSString*)primitiveTransactionCurrencyName;
 - (void)setPrimitiveTransactionCurrencyName:(NSString*)value;

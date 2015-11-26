@@ -1,0 +1,10 @@
+/* 
+  Localization.strings
+  ExchangeRates
+
+  Created by Max Lukashevich on 26.11.15.
+  Copyright © 2015 mlukashevich. All rights reserved.
+*/
+
+"reachability_error"       = "Unable to connect";
+"reachability_error_title" = "Please confirm you have an internet connection and try again";

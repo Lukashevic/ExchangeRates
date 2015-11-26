@@ -16,6 +16,7 @@ static NSString * const HTTPMethodPUT = @"PUT";
 static NSString * const HTTPMethodDELETE = @"DELETE";
 
 typedef void (^ERTWebServiceCompletion)(NSError *error, id result);
+typedef void (^ERTWebServiceSimpleCompletion)(NSError *error);
 
 @protocol ERTWebRequestModifier <NSObject>
 

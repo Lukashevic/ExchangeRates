@@ -8,10 +8,10 @@ extern const struct ERTRateAttributes {
 } ERTRateAttributes;
 
 extern const struct ERTRateRelationships {
-	__unsafe_unretained NSString *baseCurrency;
+	__unsafe_unretained NSString *currencyPair;
 } ERTRateRelationships;
 
-@class ERTBaseCurrency;
+@class ERTCurrencyPair;
 
 @interface ERTRateID : NSManagedObjectID {}
 @end
@@ -30,9 +30,9 @@ extern const struct ERTRateRelationships {
 
 //- (BOOL)validateRateValue:(id*)value_ error:(NSError**)error_;
 
-@property (nonatomic, strong) ERTBaseCurrency *baseCurrency;
+@property (nonatomic, strong) ERTCurrencyPair *currencyPair;
 
-//- (BOOL)validateBaseCurrency:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateCurrencyPair:(id*)value_ error:(NSError**)error_;
 
 @end
 
@@ -44,7 +44,7 @@ extern const struct ERTRateRelationships {
 - (int32_t)primitiveRateValueValue;
 - (void)setPrimitiveRateValueValue:(int32_t)value_;
 
-- (ERTBaseCurrency*)primitiveBaseCurrency;
-- (void)setPrimitiveBaseCurrency:(ERTBaseCurrency*)value;
+- (ERTCurrencyPair*)primitiveCurrencyPair;
+- (void)setPrimitiveCurrencyPair:(ERTCurrencyPair*)value;
 
 @end

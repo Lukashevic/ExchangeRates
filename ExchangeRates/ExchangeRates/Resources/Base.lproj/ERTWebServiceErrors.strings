@@ -1,0 +1,10 @@
+/* 
+  Localization.strings
+  ExchangeRates
+
+  Created by Max Lukashevich on 26.11.15.
+  Copyright © 2015 mlukashevich. All rights reserved.
+*/
+
+"reachability_error"       = "Невозможно установить соединение";
+"reachability_error_title" = "Пожалуйста, проверьте соединение с интернетом и попробуйте снова";

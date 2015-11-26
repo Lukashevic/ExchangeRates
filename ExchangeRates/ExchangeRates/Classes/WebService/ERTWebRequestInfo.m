@@ -28,7 +28,6 @@
 
   if (self) {
     _httpMethod = method;
-    _path = path;
     _parameters = parameters;
   }
 

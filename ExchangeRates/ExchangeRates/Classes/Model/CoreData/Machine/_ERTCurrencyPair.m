@@ -5,6 +5,7 @@
 
 const struct ERTCurrencyPairAttributes ERTCurrencyPairAttributes = {
 	.baseCurrencyName = @"baseCurrencyName",
+	.date = @"date",
 	.transactionCurrencyName = @"transactionCurrencyName",
 };
 
@@ -42,6 +43,8 @@ const struct ERTCurrencyPairRelationships ERTCurrencyPairRelationships = {
 }
 
 @dynamic baseCurrencyName;
+
+@dynamic date;
 
 @dynamic transactionCurrencyName;
 

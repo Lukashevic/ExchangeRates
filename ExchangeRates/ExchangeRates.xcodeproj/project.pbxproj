@@ -31,12 +31,37 @@
 		50432C1F1C071A3E00D6CBDB /* ERTRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50432C1C1C071A3E00D6CBDB /* ERTRate.m */; };
 		50432C9F1C071B9900D6CBDB /* ERTWebRequestInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 50432C871C071B9900D6CBDB /* ERTWebRequestInfo.m */; };
 		50432CA21C071B9900D6CBDB /* ERTWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 50432C8D1C071B9900D6CBDB /* ERTWebService.m */; };
+		504D0F0F1C0857C90015538D /* UIFont+ERTExchangeRates.m in Sources */ = {isa = PBXBuildFile; fileRef = 504D0F0E1C0857C90015538D /* UIFont+ERTExchangeRates.m */; };
 		5092B2451C07351300FC7D51 /* ERTWebService+CurrencyRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5092B2441C07351300FC7D51 /* ERTWebService+CurrencyRequest.m */; };
 		5092B2481C07393B00FC7D51 /* ERTWebServiceErrors.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5092B24A1C07393B00FC7D51 /* ERTWebServiceErrors.strings */; };
 		5092B2501C073BEA00FC7D51 /* ERTCurrencyPair+Parsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 5092B24F1C073BEA00FC7D51 /* ERTCurrencyPair+Parsing.m */; };
 		5092B2551C073DCC00FC7D51 /* NSDate+DateFromString.m in Sources */ = {isa = PBXBuildFile; fileRef = 5092B2541C073DCC00FC7D51 /* NSDate+DateFromString.m */; };
 		5092B25B1C07439200FC7D51 /* ERTDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5092B25A1C07439200FC7D51 /* ERTDataManager.m */; };
 		5092B25D1C07447900FC7D51 /* CurrenciesList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5092B25C1C07447900FC7D51 /* CurrenciesList.plist */; };
+		5092B2601C08444800FC7D51 /* ERTCurrenciesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5092B25F1C08444800FC7D51 /* ERTCurrenciesVC.m */; };
+		5092B2651C08503C00FC7D51 /* ERTCurrencyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5092B2631C08503C00FC7D51 /* ERTCurrencyCell.m */; };
+		5092B2661C08503C00FC7D51 /* ERTCurrencyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5092B2641C08503C00FC7D51 /* ERTCurrencyCell.xib */; };
+		5092B27C1C08539700FC7D51 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5092B2681C08539600FC7D51 /* Lato-Black.ttf */; };
+		5092B27D1C08539700FC7D51 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5092B2691C08539600FC7D51 /* Lato-BlackItalic.ttf */; };
+		5092B27E1C08539700FC7D51 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5092B26A1C08539600FC7D51 /* Lato-Bold.ttf */; };
+		5092B27F1C08539700FC7D51 /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5092B26B1C08539600FC7D51 /* Lato-BoldItalic.ttf */; };
+		5092B2801C08539700FC7D51 /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5092B26C1C08539600FC7D51 /* Lato-Hairline.ttf */; };
+		5092B2811C08539700FC7D51 /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5092B26D1C08539600FC7D51 /* Lato-HairlineItalic.ttf */; };
+		5092B2821C08539700FC7D51 /* Lato-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5092B26E1C08539600FC7D51 /* Lato-Heavy.ttf */; };
+		5092B2831C08539700FC7D51 /* Lato-HeavyItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5092B26F1C08539600FC7D51 /* Lato-HeavyItalic.ttf */; };
+		5092B2841C08539700FC7D51 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5092B2701C08539700FC7D51 /* Lato-Italic.ttf */; };
+		5092B2851C08539700FC7D51 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5092B2711C08539700FC7D51 /* Lato-Light.ttf */; };
+		5092B2861C08539700FC7D51 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5092B2721C08539700FC7D51 /* Lato-LightItalic.ttf */; };
+		5092B2871C08539700FC7D51 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5092B2731C08539700FC7D51 /* Lato-Medium.ttf */; };
+		5092B2881C08539700FC7D51 /* Lato-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5092B2741C08539700FC7D51 /* Lato-MediumItalic.ttf */; };
+		5092B2891C08539700FC7D51 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5092B2751C08539700FC7D51 /* Lato-Regular.ttf */; };
+		5092B28A1C08539700FC7D51 /* Lato-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5092B2761C08539700FC7D51 /* Lato-Semibold.ttf */; };
+		5092B28B1C08539700FC7D51 /* Lato-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5092B2771C08539700FC7D51 /* Lato-SemiboldItalic.ttf */; };
+		5092B28C1C08539700FC7D51 /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5092B2781C08539700FC7D51 /* Lato-Thin.ttf */; };
+		5092B28D1C08539700FC7D51 /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5092B2791C08539700FC7D51 /* Lato-ThinItalic.ttf */; };
+		5092B28E1C08539700FC7D51 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5092B27A1C08539700FC7D51 /* OFL.txt */; };
+		5092B28F1C08539700FC7D51 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5092B27B1C08539700FC7D51 /* README.txt */; };
+		5092B2921C08557700FC7D51 /* ERTCurrencyCell+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 5092B2911C08557700FC7D51 /* ERTCurrencyCell+Configuration.m */; };
 		50D311B01C06FF8B005FDCCE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D311AF1C06FF8B005FDCCE /* main.m */; };
 		50D311B31C06FF8B005FDCCE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D311B21C06FF8B005FDCCE /* AppDelegate.m */; };
 		50D311BB1C06FF8B005FDCCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D311BA1C06FF8B005FDCCE /* Assets.xcassets */; };
@@ -62,6 +87,8 @@
 		50432C871C071B9900D6CBDB /* ERTWebRequestInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ERTWebRequestInfo.m; sourceTree = "<group>"; };
 		50432C8C1C071B9900D6CBDB /* ERTWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ERTWebService.h; sourceTree = "<group>"; };
 		50432C8D1C071B9900D6CBDB /* ERTWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ERTWebService.m; sourceTree = "<group>"; };
+		504D0F0D1C0857C90015538D /* UIFont+ERTExchangeRates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+ERTExchangeRates.h"; sourceTree = "<group>"; };
+		504D0F0E1C0857C90015538D /* UIFont+ERTExchangeRates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+ERTExchangeRates.m"; sourceTree = "<group>"; };
 		5092B2401C0732D500FC7D51 /* ExchangeRates.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExchangeRates.pch; sourceTree = "<group>"; };
 		5092B2431C07351300FC7D51 /* ERTWebService+CurrencyRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ERTWebService+CurrencyRequest.h"; sourceTree = "<group>"; };
 		5092B2441C07351300FC7D51 /* ERTWebService+CurrencyRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ERTWebService+CurrencyRequest.m"; sourceTree = "<group>"; };
@@ -75,6 +102,33 @@
 		5092B2591C07439200FC7D51 /* ERTDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ERTDataManager.h; sourceTree = "<group>"; };
 		5092B25A1C07439200FC7D51 /* ERTDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ERTDataManager.m; sourceTree = "<group>"; };
 		5092B25C1C07447900FC7D51 /* CurrenciesList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CurrenciesList.plist; sourceTree = "<group>"; };
+		5092B25E1C08444800FC7D51 /* ERTCurrenciesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ERTCurrenciesVC.h; sourceTree = "<group>"; };
+		5092B25F1C08444800FC7D51 /* ERTCurrenciesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ERTCurrenciesVC.m; sourceTree = "<group>"; };
+		5092B2621C08503C00FC7D51 /* ERTCurrencyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ERTCurrencyCell.h; sourceTree = "<group>"; };
+		5092B2631C08503C00FC7D51 /* ERTCurrencyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ERTCurrencyCell.m; sourceTree = "<group>"; };
+		5092B2641C08503C00FC7D51 /* ERTCurrencyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ERTCurrencyCell.xib; sourceTree = "<group>"; };
+		5092B2681C08539600FC7D51 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		5092B2691C08539600FC7D51 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
+		5092B26A1C08539600FC7D51 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		5092B26B1C08539600FC7D51 /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		5092B26C1C08539600FC7D51 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
+		5092B26D1C08539600FC7D51 /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
+		5092B26E1C08539600FC7D51 /* Lato-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Heavy.ttf"; sourceTree = "<group>"; };
+		5092B26F1C08539600FC7D51 /* Lato-HeavyItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-HeavyItalic.ttf"; sourceTree = "<group>"; };
+		5092B2701C08539700FC7D51 /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
+		5092B2711C08539700FC7D51 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		5092B2721C08539700FC7D51 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		5092B2731C08539700FC7D51 /* Lato-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Medium.ttf"; sourceTree = "<group>"; };
+		5092B2741C08539700FC7D51 /* Lato-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-MediumItalic.ttf"; sourceTree = "<group>"; };
+		5092B2751C08539700FC7D51 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		5092B2761C08539700FC7D51 /* Lato-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Semibold.ttf"; sourceTree = "<group>"; };
+		5092B2771C08539700FC7D51 /* Lato-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		5092B2781C08539700FC7D51 /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Thin.ttf"; sourceTree = "<group>"; };
+		5092B2791C08539700FC7D51 /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
+		5092B27A1C08539700FC7D51 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		5092B27B1C08539700FC7D51 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		5092B2901C08557700FC7D51 /* ERTCurrencyCell+Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ERTCurrencyCell+Configuration.h"; sourceTree = "<group>"; };
+		5092B2911C08557700FC7D51 /* ERTCurrencyCell+Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ERTCurrencyCell+Configuration.m"; sourceTree = "<group>"; };
 		50D311AB1C06FF8A005FDCCE /* ExchangeRates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeRates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D311AF1C06FF8B005FDCCE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		50D311B11C06FF8B005FDCCE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -110,6 +164,7 @@
 		50432BED1C0708AA00D6CBDB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5092B2611C08501200FC7D51 /* View */,
 				5092B2511C073D9F00FC7D51 /* Common */,
 				50D311B11C06FF8B005FDCCE /* AppDelegate.h */,
 				50D311B21C06FF8B005FDCCE /* AppDelegate.m */,
@@ -123,6 +178,7 @@
 		50432BEF1C0708FA00D6CBDB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5092B2671C08539600FC7D51 /* Fonts */,
 				5092B2561C07420400FC7D51 /* Localization */,
 				5092B25C1C07447900FC7D51 /* CurrenciesList.plist */,
 			);
@@ -143,6 +199,8 @@
 			children = (
 				50432BF51C070ADA00D6CBDB /* ERTRatesVC.h */,
 				50432BF61C070ADA00D6CBDB /* ERTRatesVC.m */,
+				5092B25E1C08444800FC7D51 /* ERTCurrenciesVC.h */,
+				5092B25F1C08444800FC7D51 /* ERTCurrenciesVC.m */,
 			);
 			path = Contollers;
 			sourceTree = "<group>";
@@ -233,6 +291,8 @@
 			children = (
 				5092B2531C073DCC00FC7D51 /* NSDate+DateFromString.h */,
 				5092B2541C073DCC00FC7D51 /* NSDate+DateFromString.m */,
+				504D0F0D1C0857C90015538D /* UIFont+ERTExchangeRates.h */,
+				504D0F0E1C0857C90015538D /* UIFont+ERTExchangeRates.m */,
 			);
 			path = "Cocoa+Categories";
 			sourceTree = "<group>";
@@ -243,6 +303,46 @@
 				5092B24A1C07393B00FC7D51 /* ERTWebServiceErrors.strings */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		5092B2611C08501200FC7D51 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5092B2621C08503C00FC7D51 /* ERTCurrencyCell.h */,
+				5092B2631C08503C00FC7D51 /* ERTCurrencyCell.m */,
+				5092B2641C08503C00FC7D51 /* ERTCurrencyCell.xib */,
+				5092B2901C08557700FC7D51 /* ERTCurrencyCell+Configuration.h */,
+				5092B2911C08557700FC7D51 /* ERTCurrencyCell+Configuration.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5092B2671C08539600FC7D51 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5092B2681C08539600FC7D51 /* Lato-Black.ttf */,
+				5092B2691C08539600FC7D51 /* Lato-BlackItalic.ttf */,
+				5092B26A1C08539600FC7D51 /* Lato-Bold.ttf */,
+				5092B26B1C08539600FC7D51 /* Lato-BoldItalic.ttf */,
+				5092B26C1C08539600FC7D51 /* Lato-Hairline.ttf */,
+				5092B26D1C08539600FC7D51 /* Lato-HairlineItalic.ttf */,
+				5092B26E1C08539600FC7D51 /* Lato-Heavy.ttf */,
+				5092B26F1C08539600FC7D51 /* Lato-HeavyItalic.ttf */,
+				5092B2701C08539700FC7D51 /* Lato-Italic.ttf */,
+				5092B2711C08539700FC7D51 /* Lato-Light.ttf */,
+				5092B2721C08539700FC7D51 /* Lato-LightItalic.ttf */,
+				5092B2731C08539700FC7D51 /* Lato-Medium.ttf */,
+				5092B2741C08539700FC7D51 /* Lato-MediumItalic.ttf */,
+				5092B2751C08539700FC7D51 /* Lato-Regular.ttf */,
+				5092B2761C08539700FC7D51 /* Lato-Semibold.ttf */,
+				5092B2771C08539700FC7D51 /* Lato-SemiboldItalic.ttf */,
+				5092B2781C08539700FC7D51 /* Lato-Thin.ttf */,
+				5092B2791C08539700FC7D51 /* Lato-ThinItalic.ttf */,
+				5092B27A1C08539700FC7D51 /* OFL.txt */,
+				5092B27B1C08539700FC7D51 /* README.txt */,
+			);
+			name = Fonts;
+			path = Lato2OFL;
 			sourceTree = "<group>";
 		};
 		50D311A21C06FF8A005FDCCE = {
@@ -357,11 +457,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5092B2851C08539700FC7D51 /* Lato-Light.ttf in Resources */,
+				5092B28C1C08539700FC7D51 /* Lato-Thin.ttf in Resources */,
+				5092B2871C08539700FC7D51 /* Lato-Medium.ttf in Resources */,
+				5092B2821C08539700FC7D51 /* Lato-Heavy.ttf in Resources */,
 				50432C081C07110700D6CBDB /* Info.plist in Resources */,
+				5092B2891C08539700FC7D51 /* Lato-Regular.ttf in Resources */,
+				5092B27E1C08539700FC7D51 /* Lato-Bold.ttf in Resources */,
+				5092B28D1C08539700FC7D51 /* Lato-ThinItalic.ttf in Resources */,
+				5092B28E1C08539700FC7D51 /* OFL.txt in Resources */,
+				5092B2801C08539700FC7D51 /* Lato-Hairline.ttf in Resources */,
+				5092B28F1C08539700FC7D51 /* README.txt in Resources */,
 				50432BF21C070A6200D6CBDB /* Main.storyboard in Resources */,
 				5092B2481C07393B00FC7D51 /* ERTWebServiceErrors.strings in Resources */,
+				5092B2861C08539700FC7D51 /* Lato-LightItalic.ttf in Resources */,
+				5092B28B1C08539700FC7D51 /* Lato-SemiboldItalic.ttf in Resources */,
+				5092B2881C08539700FC7D51 /* Lato-MediumItalic.ttf in Resources */,
+				5092B27F1C08539700FC7D51 /* Lato-BoldItalic.ttf in Resources */,
 				50D311BE1C06FF8B005FDCCE /* LaunchScreen.storyboard in Resources */,
+				5092B28A1C08539700FC7D51 /* Lato-Semibold.ttf in Resources */,
+				5092B2811C08539700FC7D51 /* Lato-HairlineItalic.ttf in Resources */,
+				5092B27C1C08539700FC7D51 /* Lato-Black.ttf in Resources */,
+				5092B2831C08539700FC7D51 /* Lato-HeavyItalic.ttf in Resources */,
+				5092B27D1C08539700FC7D51 /* Lato-BlackItalic.ttf in Resources */,
 				5092B25D1C07447900FC7D51 /* CurrenciesList.plist in Resources */,
+				5092B2661C08503C00FC7D51 /* ERTCurrencyCell.xib in Resources */,
+				5092B2841C08539700FC7D51 /* Lato-Italic.ttf in Resources */,
 				50D311BB1C06FF8B005FDCCE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,8 +555,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5092B2601C08444800FC7D51 /* ERTCurrenciesVC.m in Sources */,
+				5092B2921C08557700FC7D51 /* ERTCurrencyCell+Configuration.m in Sources */,
 				50432C151C071A3200D6CBDB /* _ERTCurrencyPair.m in Sources */,
+				5092B2651C08503C00FC7D51 /* ERTCurrencyCell.m in Sources */,
 				5092B2551C073DCC00FC7D51 /* NSDate+DateFromString.m in Sources */,
+				504D0F0F1C0857C90015538D /* UIFont+ERTExchangeRates.m in Sources */,
 				50432C161C071A3200D6CBDB /* _ERTRate.m in Sources */,
 				5092B2451C07351300FC7D51 /* ERTWebService+CurrencyRequest.m in Sources */,
 				50432CA21C071B9900D6CBDB /* ERTWebService.m in Sources */,

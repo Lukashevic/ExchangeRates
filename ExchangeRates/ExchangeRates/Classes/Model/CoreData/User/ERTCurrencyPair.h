@@ -1,5 +1,9 @@
 #import "_ERTCurrencyPair.h"
 
 @interface ERTCurrencyPair : _ERTCurrencyPair {}
-// Custom logic goes here.
+
+- (NSDictionary *)webRequestParams;
+- (NSString *)pairString;
+
+
 @end

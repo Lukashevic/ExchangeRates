@@ -94,6 +94,9 @@ NSString * const ERTBaseUrl = @"http://api.fixer.io/latest";
 - (NSURLRequest*)requestWithRequestInfo:(ERTWebRequestInfo*)requestInfo {
 
   NSURL *url = [self manager].baseURL;
+  if (requestInfo.path) {
+    url = [url URLByAppendingPathComponent:requestInfo.path];
+  }
 
   AFHTTPRequestSerializer *serializer = [self manager].requestSerializer;
 

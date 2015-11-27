@@ -11,4 +11,6 @@
 @interface NSDate (DateFromString)
 
 + (NSDate *)dateFromString:(NSString *)stringDate;
++ (NSString *)stringFromCurrentDate;
+
 @end

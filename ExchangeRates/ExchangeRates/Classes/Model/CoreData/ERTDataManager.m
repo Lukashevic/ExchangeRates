@@ -12,12 +12,11 @@
 @implementation ERTDataManager
 
 + (void)prefillDataIfNeed {
-  
   if ([ERTCurrencyPair MR_findAll].count == 0) {
     NSString * path = [[NSBundle mainBundle] pathForResource:@"CurrenciesList" ofType:@"plist"];
-    NSDictionary * dict = [[NSDictionary alloc] initWithContentsOfFile:path];
+    NSArray * array = [NSArray arrayWithContentsOfFile:path];
     NSManagedObjectContext * context = [NSManagedObjectContext defaultContext];
-    for (NSDictionary * data in dict) {
+    for (NSDictionary * data in array) {
       ERTCurrencyPair * pair = [ERTCurrencyPair MR_createEntityInContext:context];
       pair.baseCurrencyName = data[@"baseCurrencyName"];
       pair.transactionCurrencyName = data[@"transactionCurrencyName"];

@@ -8,6 +8,13 @@
 
 @implementation ERTCurrencyPair
 
-// Custom logic goes here.
+- (NSDictionary *)webRequestParams {
+  return @{@"base" : self.baseCurrencyName,
+           @"syblos" : self.transactionCurrencyName};
+}
 
+- (NSString *)pairString {
+  return [NSString stringWithFormat:@"%@ → %@",
+          self.baseCurrencyName, self.transactionCurrencyName];
+}
 @end

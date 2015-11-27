@@ -12,13 +12,13 @@
 
 @implementation ERTCurrencyPair (Parsing)
 
-- (void)parseData:(NSDictionary *)data inContext:(NSManagedObjectContext *)context {
+- (void)parseData:(NSDictionary *)data {
   
   if (data[@"date"]) {
     self.date = [NSDate dateFromString:data[@"date"]];
   }
   
-  if (date[@"rates"]) {
+  if (data[@"rates"]) {
     ERTRate * rate = [ERTRate MR_createEntityInContext:self.managedObjectContext];
     rate.rateValue = data[@"rates"][self.transactionCurrencyName];
     [self addExchangeRatesObject:rate];

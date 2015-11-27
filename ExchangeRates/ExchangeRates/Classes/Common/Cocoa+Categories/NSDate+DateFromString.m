@@ -10,14 +10,22 @@
 
 @implementation NSDate (DateFromString)
 
+
 + (NSDate *)dateFromString:(NSString *)stringDate {
-  
-  static NSDateFormatter *dateFormatter;
+  return [[self dateFormater] dateFromString:stringDate];
+}
+
++ (NSString *)stringFromCurrentDate {
+  return [[self dateFormater] stringFromDate:[NSDate date]];
+}
+
++ (NSDateFormatter *)dateFormater {
+  static NSDateFormatter * dateFormatter;
   if (dateFormatter == nil) {
     dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
     [dateFormatter setDateFormat:@"yyyy-MM-dd"];
   }
-  return [dateFormatter dateFromString:stringDate];
+  return dateFormatter;
 }
 @end

@@ -22,7 +22,7 @@
   [MagicalRecord enableShorthandMethods];
   [MagicalRecord setupAutoMigratingCoreDataStack];
   [ERTDataManager prefillDataIfNeed];
-  
+
   return YES;
 }
 

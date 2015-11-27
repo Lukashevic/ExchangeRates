@@ -7,31 +7,23 @@
 //
 
 #import "ERTRatesVC.h"
-#import "ERTCurrenciesVC.h"
+#import "ERTRatesVC+RatesConfiguration.h"
+#import "ERTWebService+CurrencyRequest.h"
 
 static NSString * const ERTListControllerId = @"listController";
 
-@interface ERTRatesVC () <ERTCurrenciesTableProtocol>
-@property (nonatomic, weak) IBOutlet NSLayoutConstraint * tableYposition;
-@property (nonatomic, weak) IBOutlet UIView * listContainerView;
-@property (nonatomic, weak) IBOutlet UIScrollView * scrollView;
+@interface ERTRatesVC ()
+@property (nonatomic, strong) ERTCurrencyPair * currecnyPair;
+@property (nonatomic, strong) UIRefreshControl * refreshControl;
 @end
 
 @implementation ERTRatesVC
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  [self configureRefreshControl];
   
-  UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
-  [refreshControl addTarget:self action:@selector(testRefresh:) forControlEvents:UIControlEventValueChanged];
-  [self.scrollView addSubview:refreshControl];
-}
-
-- (void)testRefresh:(UIRefreshControl *)refreshControl
-{
-  dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-    [refreshControl endRefreshing];
-  });
+  self.ratesView.hidden = YES;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender {
@@ -39,6 +31,26 @@ static NSString * const ERTListControllerId = @"listController";
     ERTCurrenciesVC * listVC = segue.destinationViewController;
     listVC.delegate = self;
   }
+}
+
+- (ERTCurrencyPair *)currentCurrencyPair {
+  return self.currecnyPair;
+}
+
+#pragma mark - Actions
+
+- (IBAction)showOrHideList:(id)sender {
+  [self setListYpostion:0];
+}
+
+#pragma mark - Private
+
+- (void)configureRefreshControl {
+  self.refreshControl = [[UIRefreshControl alloc] init];
+  [self.refreshControl addTarget:self
+                          action:@selector(currencyRequest)
+                forControlEvents:UIControlEventValueChanged];
+  [self.scrollView addSubview:self.refreshControl];
 }
 
 - (void)setListYpostion:(CGFloat)yPosition {
@@ -63,14 +75,31 @@ static NSString * const ERTListControllerId = @"listController";
                  });
 }
 
-- (IBAction)showOrHideList:(id)sender {
-  [self setListYpostion:0];
+- (void)reloadData {
+  self.ratesView.hidden = NO;
+  [self configureRates];
 }
 
+- (void)currencyRequest {
+  [self.refreshControl beginRefreshing];
+  [[ERTWebService defaultWebService] ratesRequestWithCurrencyPair:self.currecnyPair
+                                                       completion:^(NSError *error)
+  {
+    [self.refreshControl endRefreshing];
+
+    if (error) {
+      //TOTO Show error here!!!
+    }
+    else {
+      [self reloadData];
+    }
+  }];
+}
 
 #pragma mark - ERTCurrenciesTableProtocol
 
 - (void)currencyPairSelected:(ERTCurrencyPair *)pair {
+  self.currecnyPair = pair;
   [self hideList];
 }
 

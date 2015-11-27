@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSDate (DateFromString)
+@interface NSDate (ERTDateFromString)
 
 + (NSDate *)dateFromString:(NSString *)stringDate;
 + (NSString *)stringFromCurrentDate;

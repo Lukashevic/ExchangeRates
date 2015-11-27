@@ -4,6 +4,20 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Lato-Black.ttf">
+            <string>Lato-Black</string>
+        </mutableArray>
+        <mutableArray key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </mutableArray>
+        <mutableArray key="Lato-MediumItalic.ttf">
+            <string>Lato-MediumItalic</string>
+        </mutableArray>
+        <mutableArray key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--RatesVC-->
         <scene sceneID="tne-QT-ifu">
@@ -21,30 +35,76 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OJb-Bz-hwh">
-                                        <rect key="frame" x="0.0" y="105" width="600" height="197"/>
+                                        <rect key="frame" x="0.0" y="105" width="600" height="271"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="og1-fg-f0t">
-                                                <rect key="frame" x="257" y="0.0" width="87" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RUB - USD" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" preferredMaxLayoutWidth="85" translatesAutoresizingMaskIntoConstraints="NO" id="og1-fg-f0t" customClass="ERTLabel">
+                                                <rect key="frame" x="258" y="0.0" width="85" height="21"/>
                                                 <animations/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="RUB - USD">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.24705882352941178" green="0.27843137254901962" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
+                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="17"/>
+                                                <color key="textColor" red="0.24705882352941178" green="0.27843137254901962" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="letterSpacing">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="51,705" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v23-tb-Ack" customClass="ERTLabel">
+                                                <rect key="frame" x="0.0" y="17" width="600" height="80"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="M16-GQ-R2I"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="80"/>
+                                                <color key="textColor" red="0.24705882352941178" green="0.27843137254901962" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="letterSpacing">
+                                                        <integer key="value" value="-4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOy-Uj-SiH" customClass="ERTLabel">
+                                                <rect key="frame" x="0.0" y="101" width="600" height="70"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="HsD-m9-McW"/>
+                                                    <constraint firstAttribute="height" constant="70" id="RmJ-zY-3x7"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Lato-MediumItalic" family="Lato" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="lineSpacing">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="RmJ-zY-3x7"/>
+                                                    </mask>
+                                                </variation>
                                             </label>
                                         </subviews>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="zOy-Uj-SiH" firstAttribute="top" secondItem="v23-tb-Ack" secondAttribute="bottom" constant="4" id="0do-fD-Ej1"/>
+                                            <constraint firstItem="v23-tb-Ack" firstAttribute="top" secondItem="og1-fg-f0t" secondAttribute="bottom" constant="-4" id="IFF-eP-pWo"/>
                                             <constraint firstItem="og1-fg-f0t" firstAttribute="centerX" secondItem="OJb-Bz-hwh" secondAttribute="centerX" id="L41-My-a1V"/>
+                                            <constraint firstItem="v23-tb-Ack" firstAttribute="leading" secondItem="OJb-Bz-hwh" secondAttribute="leading" id="PhD-FM-d8y"/>
+                                            <constraint firstAttribute="trailing" secondItem="zOy-Uj-SiH" secondAttribute="trailing" id="RjC-jn-Bwc"/>
                                             <constraint firstItem="og1-fg-f0t" firstAttribute="top" secondItem="OJb-Bz-hwh" secondAttribute="top" id="Ue4-Cu-C4t"/>
-                                            <constraint firstAttribute="height" constant="197" id="deC-lS-m3B"/>
+                                            <constraint firstAttribute="height" constant="271" id="deC-lS-m3B"/>
+                                            <constraint firstItem="zOy-Uj-SiH" firstAttribute="leading" secondItem="OJb-Bz-hwh" secondAttribute="leading" id="dxI-qN-aeo"/>
+                                            <constraint firstAttribute="trailing" secondItem="v23-tb-Ack" secondAttribute="trailing" id="psZ-cl-MBi"/>
+                                            <constraint firstItem="zOy-Uj-SiH" firstAttribute="centerY" secondItem="OJb-Bz-hwh" secondAttribute="centerY" id="wDb-Ge-uMP"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="wDb-Ge-uMP"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3x-5r-xED">
                                         <rect key="frame" x="28" y="517" width="36" height="30"/>
@@ -58,10 +118,28 @@
                                             <action selector="showOrHideList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hCc-Xq-ckQ"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCY-TI-bbw" customClass="ERTLabel">
+                                        <rect key="frame" x="175" y="522" width="251" height="21"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="FzV-V7-Shq"/>
+                                            <constraint firstAttribute="width" constant="251" id="cTs-od-a6l"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="11"/>
+                                        <color key="textColor" red="0.24705882352941178" green="0.27843137254901962" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="letterSpacing">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
                                 </subviews>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="OJb-Bz-hwh" secondAttribute="bottom" constant="298" id="Jfp-ys-1UP"/>
+                                    <constraint firstItem="zCY-TI-bbw" firstAttribute="centerX" secondItem="W6m-Ex-4U3" secondAttribute="centerX" id="0TB-9Q-wU9"/>
+                                    <constraint firstAttribute="bottom" secondItem="OJb-Bz-hwh" secondAttribute="bottom" constant="224" id="Jfp-ys-1UP"/>
+                                    <constraint firstAttribute="bottom" secondItem="zCY-TI-bbw" secondAttribute="bottom" constant="57" id="Mk1-xj-0kj"/>
                                     <constraint firstItem="OJb-Bz-hwh" firstAttribute="centerX" secondItem="W6m-Ex-4U3" secondAttribute="centerX" id="PEU-kB-kJg"/>
                                     <constraint firstAttribute="bottom" secondItem="u3x-5r-xED" secondAttribute="bottom" constant="53" id="XgE-YU-Tog"/>
                                     <constraint firstAttribute="trailing" secondItem="OJb-Bz-hwh" secondAttribute="trailing" id="afB-Dy-vYd"/>
@@ -95,6 +173,10 @@
                     </view>
                     <connections>
                         <outlet property="listContainerView" destination="R0A-yQ-hCs" id="yGl-yc-8K8"/>
+                        <outlet property="ratesHistoryLabel" destination="zOy-Uj-SiH" id="TSq-R0-99y"/>
+                        <outlet property="ratesTitleLabel" destination="og1-fg-f0t" id="hK4-TM-lG7"/>
+                        <outlet property="ratesValueLabel" destination="v23-tb-Ack" id="GKK-gq-Wnt"/>
+                        <outlet property="ratesView" destination="OJb-Bz-hwh" id="8A4-Gh-oht"/>
                         <outlet property="scrollView" destination="W6m-Ex-4U3" id="9nU-9K-UEE"/>
                         <outlet property="tableYposition" destination="DXo-yq-bRO" id="UdE-gr-1pO"/>
                     </connections>

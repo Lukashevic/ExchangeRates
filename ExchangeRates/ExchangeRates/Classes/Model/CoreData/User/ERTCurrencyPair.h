@@ -3,7 +3,8 @@
 @interface ERTCurrencyPair : _ERTCurrencyPair {}
 
 - (NSDictionary *)webRequestParams;
-- (NSString *)pairString;
-
+- (NSString *)pairStringValue;
+- (ERTRate *)newestRate;
+- (ERTRate *)yersterdayRate;
 
 @end

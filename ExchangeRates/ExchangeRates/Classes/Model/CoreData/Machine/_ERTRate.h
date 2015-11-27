@@ -4,6 +4,7 @@
 #import <CoreData/CoreData.h>
 
 extern const struct ERTRateAttributes {
+	__unsafe_unretained NSString *date;
 	__unsafe_unretained NSString *rateValue;
 } ERTRateAttributes;
 
@@ -22,6 +23,10 @@ extern const struct ERTRateRelationships {
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
 @property (nonatomic, readonly, strong) ERTRateID* objectID;
 
+@property (nonatomic, strong) NSDate* date;
+
+//- (BOOL)validateDate:(id*)value_ error:(NSError**)error_;
+
 @property (nonatomic, strong) NSNumber* rateValue;
 
 @property (atomic) int32_t rateValueValue;
@@ -37,6 +42,9 @@ extern const struct ERTRateRelationships {
 @end
 
 @interface _ERTRate (CoreDataGeneratedPrimitiveAccessors)
+
+- (NSDate*)primitiveDate;
+- (void)setPrimitiveDate:(NSDate*)value;
 
 - (NSNumber*)primitiveRateValue;
 - (void)setPrimitiveRateValue:(NSNumber*)value;

@@ -7,8 +7,9 @@
 //
 
 #import "NSDate+DateFromString.h"
+#import "NSCalendar+ERTDays.h"
 
-@implementation NSDate (DateFromString)
+@implementation NSDate (ERTDateFromString)
 
 
 + (NSDate *)dateFromString:(NSString *)stringDate {
@@ -16,7 +17,7 @@
 }
 
 + (NSString *)stringFromCurrentDate {
-  return [[self dateFormater] stringFromDate:[NSDate date]];
+  return [[self dateFormater] stringFromDate:[NSCalendar yesterday]];
 }
 
 + (NSDateFormatter *)dateFormater {

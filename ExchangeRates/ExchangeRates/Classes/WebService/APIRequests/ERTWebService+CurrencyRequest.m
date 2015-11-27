@@ -10,7 +10,7 @@
 #import "ERTCurrencyPair.h"
 #import "ERTWebRequestInfo.h"
 #import "ERTCurrencyPair+Parsing.h"
-#import "NSDate+DateFromString.h"
+#import "NSDate+ERTDateFromString.h"
 
 @implementation ERTWebService (CurrencyRequest)
 

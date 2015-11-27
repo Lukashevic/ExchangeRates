@@ -12,7 +12,7 @@
 @implementation ERTCurrencyCell (Configuration)
 
 - (void)configureWithCurrencyPair:(ERTCurrencyPair *)currencies {
-  self.currenciesLabel.text = currencies.pairString;
+  self.currenciesLabel.text = currencies.pairStringValue;
 }
 
 

@@ -1,4 +1,6 @@
 #import "ERTCurrencyPair.h"
+#import "NSCalendar+ERTDays.h"
+#import "ERTRate.h"
 
 @interface ERTCurrencyPair ()
 
@@ -13,8 +15,26 @@
            @"syblos" : self.transactionCurrencyName};
 }
 
-- (NSString *)pairString {
+- (NSString *)pairStringValue {
   return [NSString stringWithFormat:@"%@ → %@",
           self.baseCurrencyName, self.transactionCurrencyName];
 }
+
+- (ERTRate *)newestRate {
+  NSDate * date = [NSCalendar yesterday];
+  return [self rateForDate:date];
+
+}
+
+- (ERTRate *)yersterdayRate {
+  NSDate * date = [NSCalendar yesterday];
+  return [self rateForDate:date];
+}
+
+- (ERTRate *)rateForDate:(NSDate *)date {
+  return [ERTRate MR_findFirstByAttribute:@"date"
+                                withValue:date
+                                inContext:self.managedObjectContext];
+}
+
 @end

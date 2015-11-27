@@ -4,6 +4,7 @@
 #import "_ERTRate.h"
 
 const struct ERTRateAttributes ERTRateAttributes = {
+	.date = @"date",
 	.rateValue = @"rateValue",
 };
 
@@ -45,6 +46,8 @@ const struct ERTRateRelationships ERTRateRelationships = {
 
 	return keyPaths;
 }
+
+@dynamic date;
 
 @dynamic rateValue;
 

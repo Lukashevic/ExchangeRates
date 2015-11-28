@@ -10,12 +10,11 @@
 #import "ERTRatesVC+RatesConfiguration.h"
 #import "ERTWebService+CurrencyRequest.h"
 
-static NSString * const ERTListControllerId = @"listController";
+static NSString * const ERTListControllerId   = @"listController";
 static NSInteger const ERTDefaultRatesPostion = 90;
-static NSInteger const ERTTopRatesPostion = 18;
+static NSInteger const ERTTopRatesPostion     = 18;
 
 @interface ERTRatesVC ()
-@property (nonatomic, strong) ERTCurrencyPair * currecnyPair;
 @property (nonatomic, strong) NSDate * lastUpdate;
 @property (nonatomic, assign) BOOL listShowed;
 @end
@@ -30,7 +29,7 @@ static NSInteger const ERTTopRatesPostion = 18;
   [super viewDidLoad];
   
   self.ratesView.hidden = YES;
-  self.currecnyPair = [ERTCurrencyPair MR_findFirstOrCreateByAttribute:@"selectedPair"
+  self.currentCurrencyPair = [ERTCurrencyPair MR_findFirstOrCreateByAttribute:@"selectedPair"
                                                              withValue:@(YES)];
   [self currencyRequest];
   [self configureUpdateTime];
@@ -51,10 +50,6 @@ static NSInteger const ERTTopRatesPostion = 18;
     ERTCurrenciesVC * listVC = segue.destinationViewController;
     listVC.delegate = self;
   }
-}
-
-- (ERTCurrencyPair *)currentCurrencyPair {
-  return self.currecnyPair;
 }
 
 #pragma mark - Actions
@@ -96,7 +91,7 @@ static NSInteger const ERTTopRatesPostion = 18;
 
 - (void)currencyRequest {
   [self.activity startAnimating];
-  [[ERTWebService defaultWebService] ratesRequestWithCurrencyPair:self.currecnyPair
+  [[ERTWebService defaultWebService] ratesRequestWithCurrencyPair:self.currentCurrencyPair
                                                        completion:^(NSError *error)
   {
     [self.activity stopAnimating];
@@ -113,7 +108,7 @@ static NSInteger const ERTTopRatesPostion = 18;
 #pragma mark - ERTCurrenciesTableProtocol
 
 - (void)currencyPairSelected:(ERTCurrencyPair *)pair {
-  self.currecnyPair = pair;
+  self.currentCurrencyPair = pair;
   self.ratesHistoryLabel.hidden = YES;
   self.ratesValueLabel.hidden = YES;
   [self hideList];

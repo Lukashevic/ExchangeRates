@@ -27,8 +27,7 @@
 @property (nonatomic, weak) IBOutlet UILabel * ratesHistoryLabel;
 @property (nonatomic, weak) IBOutlet UILabel * updateTimeLabel;
 
-- (ERTCurrencyPair *)currentCurrencyPair;
-
+@property (nonatomic, strong) ERTCurrencyPair * currentCurrencyPair;
 
 @end
 

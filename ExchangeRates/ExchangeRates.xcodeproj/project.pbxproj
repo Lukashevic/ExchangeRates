@@ -27,7 +27,6 @@
 		5040BF651C09F06A00C35B2A /* ERTConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5040BF641C09F06A00C35B2A /* ERTConstants.m */; };
 		50432BF21C070A6200D6CBDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50432BF11C070A6200D6CBDB /* Main.storyboard */; };
 		50432BF71C070ADA00D6CBDB /* ERTRatesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 50432BF61C070ADA00D6CBDB /* ERTRatesVC.m */; };
-		50432C081C07110700D6CBDB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50432C071C07110700D6CBDB /* Info.plist */; };
 		50432C0B1C07119F00D6CBDB /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 50432C091C07119F00D6CBDB /* Model.xcdatamodeld */; };
 		50432C151C071A3200D6CBDB /* _ERTCurrencyPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 50432C111C071A3200D6CBDB /* _ERTCurrencyPair.m */; };
 		50432C161C071A3200D6CBDB /* _ERTRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50432C131C071A3200D6CBDB /* _ERTRate.m */; };
@@ -490,7 +489,6 @@
 				5092B28C1C08539700FC7D51 /* Lato-Thin.ttf in Resources */,
 				5092B2871C08539700FC7D51 /* Lato-Medium.ttf in Resources */,
 				5092B2821C08539700FC7D51 /* Lato-Heavy.ttf in Resources */,
-				50432C081C07110700D6CBDB /* Info.plist in Resources */,
 				5092B2891C08539700FC7D51 /* Lato-Regular.ttf in Resources */,
 				5092B27E1C08539700FC7D51 /* Lato-Bold.ttf in Resources */,
 				5092B28D1C08539700FC7D51 /* Lato-ThinItalic.ttf in Resources */,

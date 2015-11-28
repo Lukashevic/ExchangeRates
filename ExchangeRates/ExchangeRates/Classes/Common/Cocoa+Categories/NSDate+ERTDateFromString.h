@@ -13,6 +13,5 @@
 + (NSDate *)dateFromString:(NSString *)stringDate;
 + (NSString *)lastUpdateString:(NSDate *)date;
 + (NSString *)yesterdayDateString;
-+ (NSString *)lastUpdateString:(NSDate *)date;
 
 @end

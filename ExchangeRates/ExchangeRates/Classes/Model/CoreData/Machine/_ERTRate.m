@@ -51,22 +51,22 @@ const struct ERTRateRelationships ERTRateRelationships = {
 
 @dynamic rateValue;
 
-- (int32_t)rateValueValue {
+- (double)rateValueValue {
 	NSNumber *result = [self rateValue];
-	return [result intValue];
+	return [result doubleValue];
 }
 
-- (void)setRateValueValue:(int32_t)value_ {
-	[self setRateValue:[NSNumber numberWithInt:value_]];
+- (void)setRateValueValue:(double)value_ {
+	[self setRateValue:[NSNumber numberWithDouble:value_]];
 }
 
-- (int32_t)primitiveRateValueValue {
+- (double)primitiveRateValueValue {
 	NSNumber *result = [self primitiveRateValue];
-	return [result intValue];
+	return [result doubleValue];
 }
 
-- (void)setPrimitiveRateValueValue:(int32_t)value_ {
-	[self setPrimitiveRateValue:[NSNumber numberWithInt:value_]];
+- (void)setPrimitiveRateValueValue:(double)value_ {
+	[self setPrimitiveRateValue:[NSNumber numberWithDouble:value_]];
 }
 
 @dynamic currencyPair;

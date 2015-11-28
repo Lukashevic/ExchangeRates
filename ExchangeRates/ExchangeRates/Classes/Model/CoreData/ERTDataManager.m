@@ -13,18 +13,20 @@
 
 + (void)prefillDataIfNeed {
   if ([ERTCurrencyPair MR_findAll].count == 0) {
+    
     NSString * path = [[NSBundle mainBundle] pathForResource:@"CurrenciesList" ofType:@"plist"];
     NSArray * array = [NSArray arrayWithContentsOfFile:path];
-    NSManagedObjectContext * context = [NSManagedObjectContext defaultContext];
-    for (NSDictionary * data in array) {
-      ERTCurrencyPair * pair = [ERTCurrencyPair MR_createEntityInContext:context];
-      pair.baseCurrencyName = data[@"baseCurrencyName"];
-      pair.transactionCurrencyName = data[@"transactionCurrencyName"];
-      if (data[@"selectedPair"]) {
-        pair.selectedPair = @(YES);
+    
+    [MagicalRecord saveWithBlockAndWait:^(NSManagedObjectContext *localContext) {
+      for (NSDictionary * data in array) {
+        ERTCurrencyPair * pair = [ERTCurrencyPair MR_createEntity];
+        pair.baseCurrencyName = data[@"baseCurrencyName"];
+        pair.transactionCurrencyName = data[@"transactionCurrencyName"];
+        if (data[@"selectedPair"]) {
+          pair.selectedPair = @(YES);
+        }
       }
-    }
-    [context MR_saveToPersistentStoreAndWait];
+    }];
   }
 }
 

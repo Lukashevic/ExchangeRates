@@ -11,11 +11,18 @@
 @implementation NSCalendar (ERTDays)
 
 + (NSDate *)yesterday {
-  NSCalendar *calendar = [NSCalendar currentCalendar];
-  NSDateComponents *comps =
+  NSCalendar * calendar = [NSCalendar currentCalendar];
+  [calendar setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
+
+  NSDateComponents * components =
     [calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay
                 fromDate:[NSDate date]];
-    comps.day--;
-  return [calendar dateFromComponents:comps];
+  components.day --;
+  return [calendar dateFromComponents:components];;
 }
+
++ (NSDate *)today {
+  return [NSDate date];
+}
+
 @end

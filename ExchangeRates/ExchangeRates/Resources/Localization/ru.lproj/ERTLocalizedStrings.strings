@@ -6,6 +6,12 @@
   Copyright © 2015 mlukashevich. All rights reserved.
 */
 
-"up_string"   = "Со вчерашнего дня %@ вырос на %i процент";
-"down_string" = "Со вчерашнего дня %@ упал на %i процент";
+"up_string"   = "Со вчерашнего дня %@\n вырос на %i процент";
+"down_string" = "Со вчерашнего дня %@\n упал на %i процент";
 "updated"     = "ОБНОВЛЕННО В";
+
+"USD"         = "доллар";
+"EUR"         = "евро";
+"RUB"         = "рубль";
+"postfix0"    = "ов";
+"postfix2"    = "а";

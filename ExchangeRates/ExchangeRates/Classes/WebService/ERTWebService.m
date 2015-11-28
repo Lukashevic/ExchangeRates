@@ -27,11 +27,19 @@ NSString * const ERTBaseUrl = @"http://api.fixer.io/latest";
 
   return self;
 }
+- (void)postReachableNotification {
+  if (!isReachable) {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+      [[NSNotificationCenter defaultCenter] postNotificationName:ERTReachabilityStatusReachableNotification
+                                                          object:nil];
+    });
+  }
+}
 
 - (AFHTTPRequestOperationManager *)manager {
 
   if (!_manager) {
-    NSURL *baseUrl = [NSURL URLWithString:baseUrlString];
+    NSURL *baseUrl = [NSURL URLWithString:baseUrlString] ;
     _manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:baseUrl];
     _manager.responseSerializer = [AFJSONResponseSerializer serializer];
     _manager.requestSerializer = [AFJSONRequestSerializer serializer];
@@ -40,6 +48,8 @@ NSString * const ERTBaseUrl = @"http://api.fixer.io/latest";
     _manager.securityPolicy.allowInvalidCertificates = YES;
     
     [_manager.reachabilityManager startMonitoring];
+    
+    __weak ERTWebService * weakSelf = self;
     [_manager.reachabilityManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
       switch (status) {
         case AFNetworkReachabilityStatusUnknown: {
@@ -51,10 +61,12 @@ NSString * const ERTBaseUrl = @"http://api.fixer.io/latest";
           break;
         }
         case AFNetworkReachabilityStatusReachableViaWWAN: {
+          [weakSelf postReachableNotification];
           isReachable = YES;
           break;
         }
         case AFNetworkReachabilityStatusReachableViaWiFi: {
+          [weakSelf postReachableNotification];
           isReachable = YES;
           break;
         }
@@ -82,7 +94,42 @@ NSString * const ERTBaseUrl = @"http://api.fixer.io/latest";
 - (void)sendRequestWithRequestInfo:(ERTWebRequestInfo *)requestInfo
                         completion:(ERTWebServiceCompletion)completion {
 
-  [self sendRequestWithRequestInfo:requestInfo completion:completion];
+  if (!isReachable) {
+    if (completion) {
+      completion([self connectionError], nil);
+    }
+    return;
+  }
+  
+  void (^successBlock)(AFHTTPRequestOperation *, id) =
+  ^(AFHTTPRequestOperation *operation, id responseObject) {
+    
+        DDLogInfo(@"\nsuccess response : %@\n",
+                  [self prettyJsonStringWithString:operation.responseString]);
+    
+    if (completion) {
+      completion(nil, operation.responseObject);
+    }
+  };
+  
+  void (^failureBlock)(AFHTTPRequestOperation *, NSError *) =
+  ^(AFHTTPRequestOperation *operation, NSError *error) {
+    
+    DDLogInfo(@"\nfailure response : %@\n %@\n",
+              [self prettyJsonStringWithString:operation.responseString],
+              error);
+    
+    if (completion) {
+      completion(error, nil);
+    }
+  };
+  
+  AFHTTPRequestOperation *operation =
+    [[self manager] HTTPRequestOperationWithRequest:[self requestWithRequestInfo:requestInfo]
+                                            success:successBlock
+                                            failure:failureBlock];
+  
+  [operation start];
 }
 
 - (BOOL)isReachable {
@@ -93,7 +140,7 @@ NSString * const ERTBaseUrl = @"http://api.fixer.io/latest";
 
 - (NSURLRequest*)requestWithRequestInfo:(ERTWebRequestInfo*)requestInfo {
 
-  NSURL *url = [self manager].baseURL;
+  NSURL *url = [NSURL URLWithString:baseUrlString] ;
   if (requestInfo.path) {
     url = [url URLByAppendingPathComponent:requestInfo.path];
   }

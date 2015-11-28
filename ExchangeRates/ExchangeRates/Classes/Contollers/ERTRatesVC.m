@@ -11,19 +11,39 @@
 #import "ERTWebService+CurrencyRequest.h"
 
 static NSString * const ERTListControllerId = @"listController";
+static NSInteger const ERTDefaultRatesPostion = 90;
+static NSInteger const ERTTopRatesPostion = 18;
 
 @interface ERTRatesVC ()
 @property (nonatomic, strong) ERTCurrencyPair * currecnyPair;
-@property (nonatomic, strong) UIRefreshControl * refreshControl;
+@property (nonatomic, strong) NSDate * lastUpdate;
+@property (nonatomic, assign) BOOL listShowed;
 @end
 
 @implementation ERTRatesVC
 
+- (void)dealloc {
+  [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)viewDidLoad {
   [super viewDidLoad];
-  [self configureRefreshControl];
   
   self.ratesView.hidden = YES;
+  self.currecnyPair = [ERTCurrencyPair MR_findFirstOrCreateByAttribute:@"selectedPair"
+                                                             withValue:@(YES)];
+  [self currencyRequest];
+  [self configureUpdateTime];
+  
+  [[NSNotificationCenter defaultCenter] addObserver:self
+                                           selector:@selector(currencyRequest)
+                                               name:UIApplicationWillResignActiveNotification
+                                             object:nil];
+  
+  [[NSNotificationCenter defaultCenter] addObserver:self
+                                           selector:@selector(currencyRequest)
+                                               name:ERTReachabilityStatusReachableNotification
+                                             object:nil];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender {
@@ -39,23 +59,17 @@ static NSString * const ERTListControllerId = @"listController";
 
 #pragma mark - Actions
 
-- (IBAction)showOrHideList:(id)sender {
-  [self setListYpostion:0];
+- (IBAction)showList:(id)sender {
+  self.listShowed = YES;
+  [self setListYpostion:0 ratesYposition:ERTTopRatesPostion];
 }
 
 #pragma mark - Private
 
-- (void)configureRefreshControl {
-  self.refreshControl = [[UIRefreshControl alloc] init];
-  [self.refreshControl addTarget:self
-                          action:@selector(currencyRequest)
-                forControlEvents:UIControlEventValueChanged];
-  [self.scrollView addSubview:self.refreshControl];
-}
+- (void)setListYpostion:(CGFloat)listPosition ratesYposition:(CGFloat)ratesPosition {
 
-- (void)setListYpostion:(CGFloat)yPosition {
-
-  self.tableYposition.constant = yPosition;
+  self.tableYposition.constant = listPosition;
+  self.ratesYposition.constant = ratesPosition;
   
   [UIView animateWithDuration:0.3
                         delay:0
@@ -63,16 +77,16 @@ static NSString * const ERTListControllerId = @"listController";
                    animations:^{
                      [self.view layoutIfNeeded];
                      
-                   } completion:^(BOOL finished) {
-                   }];
+                   } completion:nil];
 
 }
 
 - (void)hideList {
-  dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)),
-                 dispatch_get_main_queue(), ^{
-                   [self setListYpostion:- self.listContainerView.frame.size.height];
-                 });
+  if (self.listShowed) {
+    self.listShowed = NO;
+    [self setListYpostion:-self.listContainerView.frame.size.height
+           ratesYposition:ERTDefaultRatesPostion];
+  }
 }
 
 - (void)reloadData {
@@ -81,16 +95,16 @@ static NSString * const ERTListControllerId = @"listController";
 }
 
 - (void)currencyRequest {
-  [self.refreshControl beginRefreshing];
+  [self.activity startAnimating];
   [[ERTWebService defaultWebService] ratesRequestWithCurrencyPair:self.currecnyPair
                                                        completion:^(NSError *error)
   {
-    [self.refreshControl endRefreshing];
-
+    [self.activity stopAnimating];
     if (error) {
-      //TOTO Show error here!!!
+      [self showAlertWithError:error];
     }
     else {
+      self.lastUpdate = [NSDate date];
       [self reloadData];
     }
   }];
@@ -100,7 +114,10 @@ static NSString * const ERTListControllerId = @"listController";
 
 - (void)currencyPairSelected:(ERTCurrencyPair *)pair {
   self.currecnyPair = pair;
+  self.ratesHistoryLabel.hidden = YES;
+  self.ratesValueLabel.hidden = YES;
   [self hideList];
+  [self currencyRequest];
 }
 
 @end

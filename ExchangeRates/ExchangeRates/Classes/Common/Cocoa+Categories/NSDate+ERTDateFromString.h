@@ -11,6 +11,8 @@
 @interface NSDate (ERTDateFromString)
 
 + (NSDate *)dateFromString:(NSString *)stringDate;
-+ (NSString *)stringFromCurrentDate;
++ (NSString *)lastUpdateString:(NSDate *)date;
++ (NSString *)yesterdayDateString;
++ (NSString *)lastUpdateString:(NSDate *)date;
 
 @end

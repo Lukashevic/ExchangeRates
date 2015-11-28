@@ -29,9 +29,9 @@ extern const struct ERTRateRelationships {
 
 @property (nonatomic, strong) NSNumber* rateValue;
 
-@property (atomic) int32_t rateValueValue;
-- (int32_t)rateValueValue;
-- (void)setRateValueValue:(int32_t)value_;
+@property (atomic) double rateValueValue;
+- (double)rateValueValue;
+- (void)setRateValueValue:(double)value_;
 
 //- (BOOL)validateRateValue:(id*)value_ error:(NSError**)error_;
 
@@ -49,8 +49,8 @@ extern const struct ERTRateRelationships {
 - (NSNumber*)primitiveRateValue;
 - (void)setPrimitiveRateValue:(NSNumber*)value;
 
-- (int32_t)primitiveRateValueValue;
-- (void)setPrimitiveRateValueValue:(int32_t)value_;
+- (double)primitiveRateValueValue;
+- (void)setPrimitiveRateValueValue:(double)value_;
 
 - (ERTCurrencyPair*)primitiveCurrencyPair;
 - (void)setPrimitiveCurrencyPair:(ERTCurrencyPair*)value;

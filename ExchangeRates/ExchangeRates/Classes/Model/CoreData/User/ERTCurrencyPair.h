@@ -6,5 +6,7 @@
 - (NSString *)pairStringValue;
 - (ERTRate *)newestRate;
 - (ERTRate *)yersterdayRate;
+- (ERTRate *)rateForDate:(NSDate *)date;
+- (CGFloat)ratesDifference;
 
 @end

@@ -30,10 +30,11 @@
 }
 
 - (void)newSelectedPair:(ERTCurrencyPair *)pair {
-  ERTCurrencyPair * oldSelectedPair = [ERTCurrencyPair MR_findFirstByAttribute:@"selectedPair" withValue:@(YES)];
+  ERTCurrencyPair * oldSelectedPair =
+    [ERTCurrencyPair MR_findFirstByAttribute:@"selectedPair" withValue:@(YES)];
   oldSelectedPair.selectedPair = @(NO);
   pair.selectedPair = @(YES);
-  [pair.managedObjectContext MR_saveToPersistentStoreAndWait];
+  [pair.managedObjectContext MR_saveOnlySelfAndWait];
 }
 
 #pragma mark - UITableViewDelegate

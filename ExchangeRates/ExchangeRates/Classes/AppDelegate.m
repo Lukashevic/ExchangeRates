@@ -21,7 +21,10 @@
   [MagicalRecord setShouldDeleteStoreOnModelMismatch:YES];
   [MagicalRecord enableShorthandMethods];
   [MagicalRecord setupAutoMigratingCoreDataStack];
+  [MagicalRecord setLoggingLevel:MagicalRecordLoggingLevelError];
+  
   [ERTDataManager prefillDataIfNeed];
+  [DDLog addLogger:[DDTTYLogger sharedInstance]];
 
   return YES;
 }

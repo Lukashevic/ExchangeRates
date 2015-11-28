@@ -6,7 +6,7 @@
 		<key>baseCurrencyName</key>
 		<string>USD</string>
 		<key>transactionCurrencyName</key>
-		<string>RUR</string>
+		<string>RUB</string>
 		<key>selectedPair</key>
 		<true/>
 	</dict>
@@ -20,7 +20,7 @@
 		<key>baseCurrencyName</key>
 		<string>EUR</string>
 		<key>transactionCurrencyName</key>
-		<string>RUR</string>
+		<string>RUB</string>
 	</dict>
 	<dict>
 		<key>baseCurrencyName</key>
@@ -30,13 +30,13 @@
 	</dict>
 	<dict>
 		<key>baseCurrencyName</key>
-		<string>RUR</string>
+		<string>RUB</string>
 		<key>transactionCurrencyName</key>
 		<string>USD</string>
 	</dict>
 	<dict>
 		<key>baseCurrencyName</key>
-		<string>RUR</string>
+		<string>RUB</string>
 		<key>transactionCurrencyName</key>
 		<string>EUR</string>
 	</dict>

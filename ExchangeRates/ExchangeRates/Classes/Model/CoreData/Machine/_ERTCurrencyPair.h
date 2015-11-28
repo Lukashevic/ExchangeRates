@@ -5,6 +5,7 @@
 
 extern const struct ERTCurrencyPairAttributes {
 	__unsafe_unretained NSString *baseCurrencyName;
+	__unsafe_unretained NSString *lastUpdate;
 	__unsafe_unretained NSString *selectedPair;
 	__unsafe_unretained NSString *transactionCurrencyName;
 } ERTCurrencyPairAttributes;
@@ -27,6 +28,10 @@ extern const struct ERTCurrencyPairRelationships {
 @property (nonatomic, strong) NSString* baseCurrencyName;
 
 //- (BOOL)validateBaseCurrencyName:(id*)value_ error:(NSError**)error_;
+
+@property (nonatomic, strong) NSDate* lastUpdate;
+
+//- (BOOL)validateLastUpdate:(id*)value_ error:(NSError**)error_;
 
 @property (nonatomic, strong) NSNumber* selectedPair;
 
@@ -58,6 +63,9 @@ extern const struct ERTCurrencyPairRelationships {
 
 - (NSString*)primitiveBaseCurrencyName;
 - (void)setPrimitiveBaseCurrencyName:(NSString*)value;
+
+- (NSDate*)primitiveLastUpdate;
+- (void)setPrimitiveLastUpdate:(NSDate*)value;
 
 - (NSNumber*)primitiveSelectedPair;
 - (void)setPrimitiveSelectedPair:(NSNumber*)value;

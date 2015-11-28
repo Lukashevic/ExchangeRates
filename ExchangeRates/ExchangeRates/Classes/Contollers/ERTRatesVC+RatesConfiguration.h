@@ -9,5 +9,6 @@
 @interface ERTRatesVC (RatesConfiguration)
 
 - (void)configureRates;
+- (void)configureUpdateTime;
 
 @end

@@ -6,6 +6,13 @@
   Copyright © 2015 mlukashevich. All rights reserved.
 */
 
-"up_string"   = "Since yesterday the %@ was up %i percent";
-"down_string" = "Since yesterday the dollar falls %i percent";
+"up_string"   = "Since yesterday the %@\n was up to %i percent";
+"down_string" = "Since yesterday the %@\n falls to %i percent";
 "updated"     = "UPDATED";
+
+"USD"         = "dollar";
+"EUR"         = "euro";
+"RUB"         = "rubel";
+
+"postfix0"    = "";
+"postfix2"    = "s";

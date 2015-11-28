@@ -8,21 +8,23 @@
 
 #import "ERTCurrencyPair+Parsing.h"
 #import "NSDate+ERTDateFromString.h"
+#import "NSCalendar+ERTDays.h"
 #import "ERTRate.h"
 
 @implementation ERTCurrencyPair (Parsing)
 
 - (void)parseData:(NSDictionary *)data {
   if (data[@"rates"]) {
+    self.lastUpdate = [NSDate date];
     NSDate * date = [NSDate dateFromString:data[@"date"]];
-    NSPredicate * predicate = [NSPredicate predicateWithFormat:@"date == %@", date];
-    ERTRate * rate;
-    if ([self.exchangeRates filteredSetUsingPredicate:predicate].count == 0) {
+    ERTRate * rate = [self rateForDate:date];
+    if (rate == nil) {
       rate = [ERTRate MR_createEntityInContext:self.managedObjectContext];
-      rate.date = date;
+      rate.date = [NSDate dateFromString:data[@"date"]];
       [self addExchangeRatesObject:rate];
     }
-    rate.rateValue = data[@"rates"][self.transactionCurrencyName];
+    rate.rateValue = @([data[@"rates"][self.transactionCurrencyName] doubleValue]);
+    [rate.managedObjectContext MR_saveToPersistentStoreAndWait];
   }
 }
 

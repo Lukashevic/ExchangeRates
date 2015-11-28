@@ -36,11 +36,10 @@
                            forToday:(BOOL)today
                           completion:(ERTWebServiceSimpleCompletion)completion {
   
-  //http://api.fixer.io/2000-01-03
 
   ERTWebRequestInfo * requestInfo = [ERTWebRequestInfo requestWithHttpMethod:HTTPMethodGET
-                                                                        path:today ? nil : [NSDate stringFromCurrentDate]
-                                                                  parameters:currencyPair.webRequestParams];
+                                                                        path:today ? nil : [NSDate yesterdayDateString]
+                                                                  parameters:[currencyPair webRequestParams]];
   
   [self sendRequestWithRequestInfo:requestInfo completion:^(NSError *error, id result) {
     

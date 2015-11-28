@@ -11,4 +11,5 @@
 @interface NSCalendar (ERTDays)
 
 + (NSDate *)yesterday;
++ (NSDate *)today;
 @end

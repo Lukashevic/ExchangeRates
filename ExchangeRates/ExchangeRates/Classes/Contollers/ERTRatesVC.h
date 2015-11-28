@@ -9,21 +9,23 @@
 #import <UIKit/UIKit.h>
 #import "ERTCurrenciesVC.h"
 #import "ERTCurrencyPair.h"
+#import "ERTBaseVC.h"
 
 #define Localized(string) NSLocalizedStringFromTable(string, @"ERTLocalizedStrings", nil)
 
-@interface ERTRatesVC : UIViewController <ERTCurrenciesTableProtocol>
+@interface ERTRatesVC : ERTBaseVC <ERTCurrenciesTableProtocol>
 
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint * tableYposition;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint * ratesYposition;
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView * activity;
 
 @property (nonatomic, weak) IBOutlet UIView * listContainerView;
 @property (nonatomic, weak) IBOutlet UIView * ratesView;
 
-@property (nonatomic, weak) IBOutlet UIScrollView * scrollView;
-
 @property (nonatomic, weak) IBOutlet UILabel * ratesTitleLabel;
 @property (nonatomic, weak) IBOutlet UILabel * ratesValueLabel;
 @property (nonatomic, weak) IBOutlet UILabel * ratesHistoryLabel;
+@property (nonatomic, weak) IBOutlet UILabel * updateTimeLabel;
 
 - (ERTCurrencyPair *)currentCurrencyPair;
 
